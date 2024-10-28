@@ -1,6 +1,6 @@
 <nav class="p-0 bg-white shadow navbar navbar-expand-lg navbar-light sticky-top">
     <a href="index.html" class="px-4 navbar-brand d-flex align-items-center px-lg-5">
-        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>José Luis Garzón</h2>
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>José Mario Garzón</h2>
     </a>
     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
@@ -11,6 +11,7 @@
 
             <a href="about.html" class="nav-item nav-link">About</a>
             <a href="courses.html" class="nav-item nav-link">Courses</a>
+            @include('frontend.security')
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                 <div class="m-0 dropdown-menu fade-down">
