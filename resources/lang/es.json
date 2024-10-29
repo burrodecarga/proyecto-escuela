@@ -36,6 +36,8 @@
     "blue": "azul",
     "red": "rojo",
     "black": "negro",
+    "roles": "roles",
+    "permissions": "permisos",
     "list of roles": "listado de roles",
     "role edit": "modificar rol",
     "role create": "crear rol",
@@ -60,6 +62,7 @@
     "no confirmed": "no confirmado",
     "no active": "no activo",
     "user adminitration panel": "panel de administración de usuarios",
+    "user edit": "modificar usuario",
     "list of users": "listado de usuarios",
     "name of role": "nombre del rol",
     "office": "consultorio",
@@ -385,5 +388,6 @@
     "the action was completed successfully.": "actividad realizada correctamente",
     "is not registered as a teacher": "no está registrado como profesor",
     "Description": "Descripción",
-    "role adminitration panel": "panel de administración de roles"
+    "role adminitration panel": "panel de administración de roles",
+    "security": "seguridad"
 }
