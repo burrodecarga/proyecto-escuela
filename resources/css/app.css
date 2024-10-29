@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.icono {
+	@apply outline outline-offset-2 outline-1 hover:outline-2 p-2 rounded-lg;
+}
+
 [x-cloak] {
-    display: none;
+	display: none;
 }

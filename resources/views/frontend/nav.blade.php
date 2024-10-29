@@ -12,6 +12,7 @@
             <a href="about.html" class="nav-item nav-link">About</a>
             <a href="courses.html" class="nav-item nav-link">Courses</a>
             @include('frontend.security')
+            @include('frontend.infraestructure')
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                 <div class="m-0 dropdown-menu fade-down">

@@ -389,5 +389,6 @@
     "is not registered as a teacher": "no está registrado como profesor",
     "Description": "Descripción",
     "role adminitration panel": "panel de administración de roles",
-    "security": "seguridad"
+    "security": "seguridad",
+    "infrastructure": "infraestructura"
 }

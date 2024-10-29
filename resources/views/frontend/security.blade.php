@@ -9,12 +9,6 @@
              style="text-transform: uppercase">{{ __('permissions') }}</a>
          <a href="{{ route('users.index') }}" class="dropdown-item"
              style="text-transform: uppercase">{{ __('users') }}</a>
-
-
-
-         <a href="team.html" class="dropdown-item" style="text-transform: uppercase">{{ __('users') }}</a>
-         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-         <a href="404.html" class="dropdown-item">404 Page</a>
      </div>
  </div>
  @endcanRole
