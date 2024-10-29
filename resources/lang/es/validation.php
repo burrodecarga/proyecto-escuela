@@ -146,6 +146,26 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        "gender" => "género",
+        "priority" => "prioridad",
+        "type" => "tipo",
+        "name" => "nombre",
+        "dose" => "dosis",
+        "dose_unit" => "unidad de dosis",
+        "frecuency" => "frecuencia",
+        "duration" => "duración",
+        "num_frecuency" => "frecuencia",
+        "num_duration" => "duración",
+        "address" => "dirección",
+        "department" => "departamento",
+        "municipality" => "minicipio",
+        "phone" => "teléfono",
+        "cell" => "celular",
+        "email" => "correo electrónico",
+        "level" => "nivel"
+
+
+    ],
 
 ];

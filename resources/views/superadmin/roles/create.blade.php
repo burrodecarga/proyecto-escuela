@@ -1,12 +1,13 @@
-<x-admin-layout>
+<x-app-layout>
     <div class="max-w-md mx-auto bg-white rounded shadow-lg">
-        <div class="w-full mx-auto p-6 my-10">
-            <h1 class="font-bold text-2xl capitalize"><strong>{{ $title }}</strong></h1>
-            <hr>
+        <div class="w-full p-6 mx-auto my-10">
+            <h1 class="text-[clamp(14px,1.5vw,24px)] font-bold text-center uppercase bg-white rounded-xl">
+                <strong>{{ $title }}</strong>
+            </h1>
             <form action="{{ route('roles.store') }}" method="POST">
-                @include('super.roles.partials.form')
-                @include('super.roles.partials.permissions')
+                @include('superadmin.roles.partials.form')
+                @include('superadmin.roles.partials.permissions')
             </form>
         </div>
     </div>
-</x-admin-layout>
+</x-app-layout>

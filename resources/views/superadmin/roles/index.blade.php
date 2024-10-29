@@ -1,20 +1,18 @@
-<x-admin-layout>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css">
+<x-app-layout>
     <x-slot name="header">
-        <h2 class="w-full text-xl font-semibold sm:w-full md:w-3/4">{{ __('Role Adminitration Panel') }}</h2>
+        <h2 class="w-full text-[clamp(14px,1.1vw,44px)] font-semibold uppercase sm:w-full md:w-3/4">
+            {{ __('role adminitration panel') }}</h2>
     </x-slot>
 
     <div class="container mt-10">
-        <div class="w-full mx-auto text-center card md:w-1/2 min-w-12">
+        <div class="w-1/2 mx-auto text-center card md:w-1/2 min-w-12">
             <div class="text-white card-header bg-primary">
                 <div class="flex items-center justify-between card-title">
                     <h4>
                         {{ __('list of roles') }}
                     </h4>
 
-                    <a href="{{ route('roles.create') }}" class="text-white cursor-pointer"
-                        title="{{ __('add role') }}">
+                    <a href="{{ route('roles.create') }}" class="text-white cursor-pointer" title="{{ __('add role') }}">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -24,12 +22,12 @@
                 </div>
             </div>
             <div class="card-body">
-                <table id="role" class="table table-hover" style="width:100%">
+                <table id="role" class="table table-striped text-[clamp(14px,1.1vw,18px)]" style="width:100%;">
                     <thead>
                         <tr>
-                            <th>Id</th>
-                            <th>Name</th>
-                            <th>actions</th>
+                            <th>{{ _('id') }}</th>
+                            <th>{{ __('role name') }}</th>
+                            <th>{{ __('actions') }}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -83,9 +81,9 @@
 
 
     @push('script')
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        {{-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script> --}}
 
 
 
@@ -95,7 +93,14 @@
                     "columnDefs": [{
                         "targets": [2],
                         "orderable": false
-                    }]
+                    }],
+                    language: {
+                        info: 'Mostrando pag. _PAGE_ of _PAGES_',
+                        infoEmpty: 'No hay regiastros diponibles',
+                        infoFiltered: '(filtro de _MAX_ total)',
+                        lengthMenu: 'Ver _MENU_ reg. por pag.',
+                        zeroRecords: 'No hay registros'
+                    }
 
                 });
                 setTimeout(function() {
@@ -132,4 +137,4 @@
             });
         </script>
     @endpush
-</x-admin-layout>
+</x-app-layout>

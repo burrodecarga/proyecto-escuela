@@ -17,15 +17,15 @@ class RolePolicy
 
     public function update(User $user, Role $role): bool
     {
-        return false;
-        //$role = $user->roles()->first();
-        //return $user->hasRole('super-admin');
+
+        return $role->id > MINIMO_ROLE_ORIGINAL;
+
     }
 
 
     public function canDeleteRole(User $user, Role $role): bool
     {
-        return false;
+        return $role->id > MINIMO_ROLE_ORIGINAL;
         //$role = $user->roles()->first();
         //     $permissions = $role->permissions->pluck('name')->toArray();
         //     return in_array($ability . '.index', $permissions) || in_array($ability . '.index', $permissions
