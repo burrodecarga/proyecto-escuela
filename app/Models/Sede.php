@@ -6,10 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sede extends Model
 {
-    const FOTO = '/storage/schools/foto.png';
+    const FOTO = '/img/schools/foto.png';
+    const SCHOOL = '/img/schools/school.jpg';
+
 
     protected $fillable = [
         'name',
+        'nit',
+        'dane',
+        'slug',
         'numero',
         'school_id',
         'address',
@@ -25,7 +30,7 @@ class Sede extends Model
 
     protected $attributes = [
         'logo' => self::FOTO,
-        'image' => self::FOTO,
+        'image' => self::SCHOOL,
     ];
 
     public function school()

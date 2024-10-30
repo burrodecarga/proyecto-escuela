@@ -111,7 +111,7 @@
                 $('.form-delete').submit(function(e) {
 
                     e.preventDefault();
-                    alert('XXX');
+
 
                     Swal.fire({
                         title: 'Está seguro de querer eliminar escuela?',

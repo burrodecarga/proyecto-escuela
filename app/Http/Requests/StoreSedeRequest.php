@@ -11,7 +11,8 @@ class StoreSedeRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return auth()->user()->hasRole('super-admin');
+
     }
 
     /**
@@ -21,8 +22,18 @@ class StoreSedeRequest extends FormRequest
      */
     public function rules(): array
     {
+        //dd($_FILES);
         return [
-            //
+            'school_id' => 'required',
+            'name' => 'required',
+            'address' => 'required',
+            'department' => 'required',
+            'municipality' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'cell' => 'required',
+            'logo' => 'sometimes|max:2000|mimes:jpeg,png,bmp,jpg',
+            'image' => 'sometimes|max:2000|mimes:jpeg,png,bmp,jpg',
         ];
     }
 }
