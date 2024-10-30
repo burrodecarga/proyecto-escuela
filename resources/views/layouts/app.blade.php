@@ -13,10 +13,13 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link href="{{ asset('css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
-    <link href="{{ asset('css/dataTables.bootstrap5.css') }}" />
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/datatables.min.css') }}" rel="stylesheet" />
+    @stack('css')
+
 
 
     <!-- Styles -->
@@ -48,9 +51,7 @@
 
     @livewireScripts
     <script type="text/javascript" src="{{ asset('js/jquery-3.7.1.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/dataTables.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/dataTables.bootstrap5.js') }}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     @stack('scripts')

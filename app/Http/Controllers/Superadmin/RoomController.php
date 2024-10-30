@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Superadmin;
 
-use App\Models\Grado;
-use App\Http\Requests\StoreGradoRequest;
-use App\Http\Requests\UpdateGradoRequest;
+use App\Models\Room;
+use App\Http\Requests\UpdateRoomRequest;
+use App\Http\Requests\StoreRoomRequest;
+use App\Http\Controllers\Controller;
 
-class GradoController extends Controller
+class RoomController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +28,7 @@ class GradoController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreGradoRequest $request)
+    public function store(StoreRoomRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class GradoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Grado $grado)
+    public function show(Room $room)
     {
         //
     }
@@ -43,7 +44,7 @@ class GradoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Grado $grado)
+    public function edit(Room $room)
     {
         //
     }
@@ -51,7 +52,7 @@ class GradoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateGradoRequest $request, Grado $grado)
+    public function update(UpdateRoomRequest $request, Room $room)
     {
         //
     }
@@ -59,7 +60,7 @@ class GradoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Grado $grado)
+    public function destroy(Room $room)
     {
         //
     }

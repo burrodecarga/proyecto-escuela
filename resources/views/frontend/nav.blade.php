@@ -13,14 +13,8 @@
             <a href="courses.html" class="nav-item nav-link">Courses</a>
             @include('frontend.security')
             @include('frontend.infraestructure')
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                <div class="m-0 dropdown-menu fade-down">
-                    <a href="team.html" class="dropdown-item">Our Team</a>
-                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                    <a href="404.html" class="dropdown-item">404 Page</a>
-                </div>
-            </div>
+            @include('frontend.academy')
+
             <a href="contact.html" class="nav-item nav-link">Contact</a>
         </div>
         <div class="nav-item dropdown">

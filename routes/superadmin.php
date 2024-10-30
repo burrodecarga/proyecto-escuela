@@ -6,10 +6,13 @@ use App\Http\Controllers\Superadmin\SedeController;
 use App\Http\Controllers\Superadmin\SchoolController;
 use App\Http\Controllers\Superadmin\RoleController;
 use App\Http\Controllers\Superadmin\PermissionController;
+use App\Http\Controllers\Superadmin\GradoController;
 
 Route::resource('roles', RoleController::class)->names('roles');
 Route::resource('users', UserController::class)->names('users');
 Route::resource('schools', SchoolController::class)->names('schools');
 Route::resource('sedes', SedeController::class)->names('sedes');
+Route::resource('grados', GradoController::class)->names('grados');
+
 Route::resource('permissions', PermissionController::class)->only('index')->names('permissions');
 
