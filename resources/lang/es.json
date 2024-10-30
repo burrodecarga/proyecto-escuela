@@ -167,6 +167,8 @@
     "grado created successfully": "grado creado correctamente",
     "grado edited successfully": "grado modificado correctamente",
     "grado deleted successfully": "grado eliminado correctamente",
+    "room create": "crear espacio",
+    "create room": "crear espacio",
     "name of room": "nombre del espacio",
     "input name of room": "ingrese nombre del espacio",
     "width of room": "ancho del espacio",

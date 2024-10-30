@@ -2,9 +2,13 @@
 
 namespace Database\Seeders;
 
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
+use App\Models\Sede;
+use App\Models\Grado;
 
 class SedeSeeder extends Seeder
 {
@@ -20,6 +24,7 @@ class SedeSeeder extends Seeder
             $user = User::where('email', 'like', '%admin%')->inRandomOrder()->limit(1)->get()->first();
             //dd($user);
             $sede = new Sede();
+            $sede->school = mb_strtolower($obj->school);
             $sede->name = mb_strtolower($obj->name);
             $sede->slug = Str::slug($obj->name);
             $sede->nit = mb_strtolower($obj->nit);
@@ -32,8 +37,8 @@ class SedeSeeder extends Seeder
             $sede->email = mb_strtolower($obj->email);
             $sede->school_id = mb_strtolower($obj->school_id);
             $sede->save();
-            $sede->coordinadores()->sync([$user->id => ['rol' => 'coordinator']]);
-            $sede->grados()->sync($grados);
+            // $sede->coordinadores()->sync([$user->id => ['rol' => 'coordinator']]);
+            // $sede->grados()->sync($grados);
         }
     }
 }

@@ -7,6 +7,10 @@
              style="text-transform: uppercase">{{ __('schools') }}</a>
          <a href="{{ route('sedes.index') }}" class="dropdown-item"
              style="text-transform: uppercase">{{ __('sedes') }}</a>
+         <a href="{{ route('rooms.index') }}" class="dropdown-item"
+             style="text-transform: uppercase">{{ __('rooms') }}</a>
+         <a href="{{ route('resources.index') }}" class="dropdown-item"
+             style="text-transform: uppercase">{{ __('resources') }}</a>
      </div>
  </div>
  @endcanRole

@@ -43,6 +43,7 @@ class SedeController extends Controller
     {
         $school = School::find($request->input('school_id'));
         $newSede = Sede::create([
+            'school' => mb_strtolower($school->name),
             'name' => mb_strtolower($request->input('name', )),
             'slug' => Str::slug(mb_strtolower($request->input('name', ))),
             'school_id' => mb_strtolower($request->input('school_id', )),
@@ -104,6 +105,7 @@ class SedeController extends Controller
     public function update(UpdatesedeRequest $request, sede $sede)
     {
         $school = School::find($request->input('school_id'));
+        $sede->school = mb_strtolower($school->name);
         $sede->name = mb_strtolower($request->input('name', ));
         $sede->slug = Str::slug(mb_strtolower($request->input('name', )));
         $sede->school_id = mb_strtolower($request->input('school_id', ));

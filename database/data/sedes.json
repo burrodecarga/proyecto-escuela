@@ -2,6 +2,7 @@
     {
         "id": 1,
         "school_id": 1,
+        "school": "I.E.D. LORENCITA VILLEGAS DE SANTOS",
         "name": "  I.E.D. TECNICA LORENCITA VILLEGAS DE SANTOS-1",
         "nit": "900128472-9",
         "dane": "147245000252",
@@ -19,6 +20,7 @@
     {
         "id": 2,
         "school_id": 1,
+        "school": "I.E.D. LORENCITA VILLEGAS DE SANTOS",
         "name": "  I.E.D. TECNICA LORENCITA VILLEGAS DE SANTOS-2",
         "nit": "900128472-9",
         "dane": "147245000252",
@@ -36,6 +38,7 @@
     {
         "id": 3,
         "school_id": 1,
+        "school": "  I.E.D. LORENCITA VILLEGAS DE SANTOS",
         "name": "  I.E.D. TECNICA LORENCITA VILLEGAS DE SANTOS-3",
         "nit": "900128472-9",
         "dane": "147245000252",
@@ -53,6 +56,7 @@
     {
         "id": 4,
         "school_id": 2,
+        "school": "  IUTEVAL",
         "name": "  I.U.T.V. INSTITUTO TECNOLÓGICO VALENCIA",
         "address": "calle piar 14-a, aragua, apure",
         "department": "apure, apurito",
@@ -70,6 +74,7 @@
     {
         "id": 5,
         "school_id": 3,
+        "school": " PEDRO GUAL",
         "name": "  LICEO PEDRO GUAL",
         "nit": "456677472-9",
         "dane": "7432245000252",

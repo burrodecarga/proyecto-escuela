@@ -2,10 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Room extends Model
 {
+
+    use HasFactory;
     const CAPACITY = 0.9;
 
     protected $fillable = [
@@ -22,8 +25,9 @@ class Room extends Model
         return $this->belongsTo(Sede::class);
     }
 
+
     public function max_capacity()
     {
-        return round($this->widt * $this->long * $this->CAPACITY);
+        return round($this->width * $this->long * $this->CAPACITY);
     }
 }

@@ -33,6 +33,8 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         $this->call(SchoolSeeder::class);
         $this->call(GradoSeeder::class);
+        $this->call(SedeSeeder::class);
+        $this->call(RoomSeeder::class);
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Superadmin;
 
+use App\Models\Sede;
 use App\Models\Room;
 use App\Http\Requests\UpdateRoomRequest;
 use App\Http\Requests\StoreRoomRequest;
@@ -14,7 +15,8 @@ class RoomController extends Controller
      */
     public function index()
     {
-        //
+        $rooms = Room::with('sede')->get();
+        return view('superadmin.rooms.index', compact('rooms'));
     }
 
     /**
@@ -22,7 +24,11 @@ class RoomController extends Controller
      */
     public function create()
     {
-        //
+        $title = "room create";
+        $btn = "create room";
+        $room = new Room();
+        $sedes = Sede::all();
+        return view('superadmin.rooms.create', compact('room', 'btn', 'title', 'sedes'));
     }
 
     /**
@@ -30,7 +36,22 @@ class RoomController extends Controller
      */
     public function store(StoreRoomRequest $request)
     {
-        //
+        $w = $request->input('width');
+        $l = $request->input('long');
+        $c = $w * $l * Room::CAPACITY;
+
+
+        $room = Room::create([
+            'sede_id' => mb_strtolower($request->input('sede_id')),
+            'name' => mb_strtolower($request->input('name')),
+            'width' => mb_strtolower($request->input('width')),
+            'long' => mb_strtolower($request->input('long')),
+            'high' => mb_strtolower($request->input('high')),
+            'capacity' => round($c)
+        ]);
+
+        $message = __('room created successfully');
+        return redirect()->route('rooms.index')->with('success', $message);
     }
 
     /**
@@ -46,7 +67,14 @@ class RoomController extends Controller
      */
     public function edit(Room $room)
     {
-        //
+        //dd($room->id);
+        if ($room->id <= -20) {
+            abort(403);
+        }
+        $title = "room edit";
+        $btn = "update room";
+        $sedes = Sede::all();
+        return view('superadmin.rooms.edit', compact('room', 'btn', 'title', 'sedes'));
     }
 
     /**
@@ -54,7 +82,23 @@ class RoomController extends Controller
      */
     public function update(UpdateRoomRequest $request, Room $room)
     {
-        //
+        $w = $request->input('width');
+        $l = $request->input('long');
+        $c = $w * $l * Room::CAPACITY;
+
+
+        $room->update([
+            'sede_id' => mb_strtolower($request->input('sede_id')),
+            'name' => mb_strtolower($request->input('name')),
+            'width' => mb_strtolower($request->input('width')),
+            'long' => mb_strtolower($request->input('long')),
+            'high' => mb_strtolower($request->input('high')),
+            'capacity' => round($c)
+        ]);
+        $room->save();
+
+        $message = __('room updated successfully');
+        return redirect()->route('rooms.index')->with('success', $message);
     }
 
     /**
@@ -62,6 +106,18 @@ class RoomController extends Controller
      */
     public function destroy(Room $room)
     {
-        //
+        $room->delete();
+        $message = __('room deleted successfully');
+        return redirect()->route('rooms.index')->with('success', $message);
     }
+
+    // public function create_resource($id)
+    // {
+    //     $resource = new Resource();
+    //     $categories = RECURSOS;
+    //     $room = Room::find($id);
+    //     $title = "add resource to room";
+    //     $btn = "add resource";
+    //     return view('superadmin.rooms.resource', compact('categories', 'resource', 'room', 'btn', 'title'));
+    // }
 }

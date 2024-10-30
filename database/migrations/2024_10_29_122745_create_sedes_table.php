@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->unsignedBigInteger('school_id');
             $table->integer('numero')->default(1);
+            $table->string('school');
             $table->string('name');
             $table->string('slug');
             $table->string('nit');
