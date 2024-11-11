@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Superadmin;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use App\Models\User;
 use App\Models\Sede;
 use App\Models\School;
 use App\Http\Requests\UpdateSedeRequest;
@@ -164,5 +165,12 @@ class SedeController extends Controller
         $message = __('sede deleted successfully');
         return redirect()->route('sedes.index')->with('success', $message);
 
+    }
+
+    public function coordinator(Sede $sede)
+    {
+        $users = User::where('rol', 'cordinator')->get();
+        //dd($users);
+        return view('superadmin.sedes.cordinator', compact('sede', 'users'));
     }
 }

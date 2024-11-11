@@ -21,9 +21,9 @@ class ResourceController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Room $room)
+    public function create()
     {
-        dd($room->id); //
+
     }
 
     /**

@@ -54,9 +54,7 @@
     <script type="text/javascript" src="{{ asset('js/dataTables.js') }}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    @stack('scripts')
 
-    @stack('script')
     <script>
         //Session Flash auto close
         setTimeout(function() {
@@ -69,6 +67,8 @@
             Swal.fire(e.detail);
         });
     </script>
+    @stack('script')
+    @stack('scripts')
 
 </body>
 

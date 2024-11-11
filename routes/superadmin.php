@@ -22,3 +22,12 @@ Route::resource('grados', GradoController::class)->names('grados');
 
 Route::resource('permissions', PermissionController::class)->only('index')->names('permissions');
 
+
+///Rutas Particulares School
+
+Route::get('administrator/{school}', [SchoolController::class, 'administrator'])->name('schools.administrator');
+
+Route::post('assign', [SchoolController::class, 'assign'])->name('schools.assign');
+
+Route::get('coordinator/{sede}', [SedeController::class, 'coordinator'])->name('sedes.coordinator');
+

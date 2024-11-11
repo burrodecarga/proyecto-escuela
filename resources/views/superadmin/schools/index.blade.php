@@ -4,8 +4,8 @@
             {{ __('school adminitration panel') }}</h2>
     </x-slot>
 
-    <div class="container mt-10">
-        <div class="w-3/4 mx-auto text-center card md:w-11/12 min-w-12">
+    <div class="w-11/12 mx-auto mt-10">
+        <div class="w-full mx-auto text-center card">
             <div class="text-white card-header bg-primary">
                 <div class="flex items-center justify-between uppercase">
                     <h4>
@@ -23,25 +23,32 @@
                 </div>
             </div>
             <div class="card-body">
-                <table id="school" class="table table-striped text-[clamp(10px,1.1vw,16px)]" style="width:100%;">
+                <table id="school" class="table table-striped text-[clamp(10px,1vw,14px)]" style="width:100%;">
                     <thead>
-                        <tr>
-                            <th>{{ __('id') }}</th>
+                        <tr style="text-align: justify">
+                            <th style="text-align: center">{{ __('id') }}</th>
                             <th>{{ __('name') }}</th>
                             <th>{{ __('nit') }}</th>
-                            <th>{{ __('dane') }}</th>
+                            <th style="text-align: justify">{{ __('dane') }}</th>
+                            <th>{{ __('administrator') }}</th>
                             <th class="text-center"> {{ __('action') }}</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($schools as $school)
-                            <tr>
-                                <td width="10%">{{ $school->id }}</td>
-                                <td width="40%">{{ $school->name }}</td>
+                            <tr style="text-align: justify">
+                                <td width="10%" style="text-align: center">{{ $school->id }}</td>
+                                <td width="30%">{{ $school->name }}</td>
                                 <td width="15%">{{ $school->nit }}</td>
-                                <td width="15%">{{ $school->dane }}</td>
-                                <td width="20%" class="flex justify-around w-full mx-auto text-center">
-                                    <a href="{{ route('schools.show', $school->id) }}" class="text-green-600">
+                                <td width="15%" style="text-align: justify">{{ $school->dane }}</td>
+                                <td width="20%">{{ $school->administrator_name }}</td>
+                                <td width="" class="flex justify-around w-full mx-auto text-center"> <a
+                                        href="{{ route('schools.administrator', $school->id) }}" class="text-green-600"
+                                        title="{{ __('assign administrator to school') }}">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                    </a>
+                                    <a href="{{ route('schools.show', $school->id) }}" class="text-green-600"
+                                        title="{{ __('view detail of school') }}">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -50,7 +57,8 @@
                                                 d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                         </svg>
                                     </a>
-                                    <a href="{{ route('schools.edit', $school->id) }}">
+                                    <a href="{{ route('schools.edit', $school->id) }}"
+                                        title="{{ __('edit school') }}">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -59,7 +67,7 @@
                                     </a>
 
                                     <form action="{{ route('schools.destroy', $school->id) }}" method="POST"
-                                        class="text-red-600 form-delete">
+                                        class="text-red-600 form-delete" title="{{ __('delete school') }}">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit">
@@ -96,7 +104,7 @@
             $(document).ready(function() {
                 $('#school').DataTable({
                     "columnDefs": [{
-                        "targets": [2],
+                        "targets": [5],
                         "orderable": false
                     }],
                     language: {

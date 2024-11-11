@@ -9,7 +9,7 @@
                 <div class="mb-1">
                     <x-label class="my-2 italic capitalize" value="{{ __('school') }}" for="school_id" />
                     <x-input type="text" name="name" class="w-full" placeholder="{{ __('input name of sede') }}"
-                        value="{{ old('name', $sede->school->name) }}" />
+                        value="{{ old('name', $sede->school) }}" />
                     <x-input-error for="school_id" />
                 </div>
                 <div class="grid grid-cols-1 gap-5 md:grid-cols-2">

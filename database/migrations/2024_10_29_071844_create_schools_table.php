@@ -18,6 +18,9 @@ return new class extends Migration {
             $table->string('dane');
             $table->string('logo')->nullable();
             $table->string('image')->nullable();
+            $table->string('administrator_name')->nullable();
+            $table->unsignedBigInteger('administrator_id')->nullable();
+
             $table->timestamps();
         });
     }

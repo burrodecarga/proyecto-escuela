@@ -10,7 +10,8 @@
             <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
 
             <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="courses.html" class="nav-item nav-link">Courses</a>
+            <a href="{{ route('administrator.index') }}"
+                class="nav-item nav-link text-uppercase">{{ _('administrator') }}</a>
             @include('frontend.security')
             @include('frontend.infraestructure')
             @include('frontend.academy')
@@ -43,7 +44,7 @@
             </div>
 
         </div>
-        <a href="" class="py-4 btn btn-primary px-lg-5 d-none d-lg-block">Join Now<i
-                class="fa fa-arrow-right ms-3"></i></a>
+        <a href="" class="py-4 btn btn-primary px-lg-5 d-none d-lg-block">
+            {{ Auth::user()->roles->pluck('name')[0] }}<i class="fa fa-arrow-right ms-3"></i></a>
     </div>
 </nav>

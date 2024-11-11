@@ -33,7 +33,7 @@
                     <h2 class="mt-6 mb-3 font-medium text-indigo-500 uppercase"> {{ __('sedes') }} </h2>
                     <p class="mb-3 text-sm font-light text-gray-500">
                         @forelse ($sedes as $sede)
-                            <form action="{{ route('schools.sedes.show', [$school->id, $sede->id]) }}">
+                            <form action="{{ route('sedes.show', $sede->id) }}">
                                 <button type="submit"
                                     class="flex items-center w-64 p-4 bg-white border border-gray-200 rounded hover:bg-gray-50 hover:border-b-4 hover:border-b-blue-500 active:bg-gray-100">
                                     <div class="flex items-center justify-center mr-4 text-gray-500">
