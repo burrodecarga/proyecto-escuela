@@ -1,7 +1,7 @@
 <x-app-layout>
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" href="{{ asset('css/dataTables.dataTables.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('css/tableAlto.css') }} ">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+
     <x-slot name="header">
         <h2 class="w-full text-xl font-semibold uppercase sm:w-full md:w-3/4">
             {{ __('sedes adminitration panel') }}
@@ -15,7 +15,8 @@
                     <h4>
                         {{ __('list of school locations') }}
                     </h4>
-                    <a href="{{ route('sedes.create') }}" class="text-white cursor-pointer" title="{{ __('add sede') }}">
+                    <a href="{{ route('sedes.create') }}" class="text-white cursor-pointer"
+                        title="{{ __('add sede') }}">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -28,21 +29,29 @@
                 <table id="sede" class="table text-sm table-hover" style="width:100%">
                     <thead>
                         <tr>
-                            <th class="text-sm text-left uppercase">{{ __('school') }}</th>
-                            <th class="text-sm text-left uppercase">{{ __('sede') }}</th>
+                            <th class="text-sm text-left uppercase">{{ __('school') }}/{{ __('sede') }}</th>
                             <th class="text-sm text-left uppercase">{{ __('department') }}</th>
                             <th class="text-sm text-left uppercase">{{ __('municipality') }}</th>
+                            <th class="text-sm text-left uppercase">{{ __('coordinators') }}</th>
                             <th class="text-center uppercase"> {{ __('action') }}</th>
                         </tr>
                     </thead>
                     <tbody class="text-sm">
                         @foreach ($sedes as $sede)
                             <tr class="odd:bg-slate-100">
-                                <td width="25%" class="text-xs text-left">{{ $sede->school }}</td>
-                                <td width="25%" class="text-left">{{ $sede->name }}</td>
+                                <td width="25%" class="text-xs text-left">
+                                    {{ $sede->school }}<br>{{ $sede->name }}</td>
                                 <td width="15%" class="text-left">{{ $sede->department }}</td>
                                 <td width="15%" class="text-left">{{ $sede->municipality }}</td>
-                                <td class="flex justify-center gap-3 text-center" width="">
+                                <td width="25%" class="text-left">
+                                    @forelse ($sede->coordinadores as $coordinador)
+                                        <p class="m-0">{{ $coordinador->name }}</p>
+                                    @empty
+                                        {{ __('no active') }}
+                                    @endforelse
+
+                                </td>
+                                <td class="grid grid-cols-1 gap-3 md:grid-cols-3">
                                     <a href="{{ route('sedes.coordinator', $sede->id) }}" class="text-green-600"
                                         title="{{ __('assign manager to the school headquarters') }}">
                                         <i class="fa-solid icono fa-user-tie"></i>
@@ -58,11 +67,11 @@
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit">
-                                            <i class="text-red-500 icono fa-solid fa-trash"></i>
+                                            <i class="text-red-500 icono fa-solid fa-trash "></i>
                                         </button>
-
                                     </form>
-
+                                    <br>
+                                    <br>
                                 </td>
 
                             </tr>
@@ -118,6 +127,30 @@
                 });
 
             });
+
+            var calcDataTableHeight = function() {
+                return $(window).height() * 55 / 100
+            };
+
+            var oTable = $('#reqAllRequestsTable').dataTable({
+                "sScrollY": calcDataTableHeight()
+            });
+
+            $(window).resize(function() {
+                var oSettings = oTable.fnSettings()
+                oSettings.oScroll.sY = calcDataTableHeight()
+                oTable.fnDraw()
+            });
+            $(function() {
+                $(document).tooltip();
+            });
         </script>
-    @endpush
-</x-app-layout>
+        <style>
+            label {
+                display: inline-block;
+                width: 5em;
+            }
+
+            div>label>select {}
+
+        </script>@endpush </x-app-layout>

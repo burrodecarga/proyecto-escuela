@@ -6,7 +6,7 @@
             <form action="{{ route('users.update', $user->id) }}" method="POST">
                 @method('PUT')
                 <input type="hidden" name="id" value="{{ $user->id }}">
-                @include('superadmin.users.partials.form')
+                @include('config.users.partials.form')
             </form>
         </div>
     </div>

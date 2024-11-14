@@ -1,0 +1,9 @@
+#data_wrapper.dataTables_wrapper: {
+	height: 700px !important;
+	background-color: #f1f1f1 !important;
+}
+#data_wrapper .fg-toolbar.ui-toolbar.ui-widget-header.ui-helper-clearfix.ui-corner-bl.ui-corner-br: {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}

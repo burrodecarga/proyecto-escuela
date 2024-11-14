@@ -3,13 +3,14 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Fortify\TwoFactorAuthenticatable;
-use Laravel\Jetstream\HasProfilePhoto;
-use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
+use Laravel\Sanctum\HasApiTokens;
+use Laravel\Jetstream\HasProfilePhoto;
+use Laravel\Fortify\TwoFactorAuthenticatable;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
@@ -27,10 +28,25 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    const MENOR = 9;
+    const MEDIO = 17;
+    const MAYOR = 18;
+
     protected $fillable = [
         'name',
         'email',
         'password',
+        'address',
+        'phone',
+        'gender',
+        'birthdate',
+        'rol',
+        'confirmed',
+        'active',
+        'cedula',
+        'parent_id',
+        'last_name',
     ];
 
     /**
@@ -65,5 +81,54 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        'birthdate',
+        // your other new column
+    ];
+
+    protected $attributes = [];
+
+
+    public function getAge()
+    {
+        $this->birthdate->diff($this->attributes['dob'])
+            ->format('%y years, %m months and %d days');
+    }
+
+    public function age()
+    {
+        return Carbon::parse($this->attributes['birthdate'])->age;
+    }
+
+    public function is_minor()
+    {
+        $edad = Carbon::parse($this->attributes['birthdate'])->age;
+        return $edad > self::MENOR;
+    }
+
+    public function role_type()
+    {
+        $edad = Carbon::parse($this->attributes['birthdate'])->age;
+
+        if ($edad <= self::MENOR) {
+            $role = 'student-basic';
+        } elseif ($edad > self::MENOR and $edad <= self::MEDIO) {
+            $role = 'student-basic';
+        } else {
+            $role = 'student-high';
+        }
+
+        return $role;
+    }
+
+
+
+    public function coordina()
+    {
+        return $this->belongsToMany(Sede::class);
     }
 }

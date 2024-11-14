@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Superadmin;
+namespace App\Http\Controllers\Config;
 
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
@@ -120,7 +120,7 @@ class RoleController extends Controller
     {
         $user = auth()->user();
         $roleName = $user->roles->pluck("name")->first();
-        if ($role->id < MINIMO_ROLE_ORIGINAL) {
+        if ($role->id <= MINIMO_ROLE_ORIGINAL) {
             return redirect()->route('roles.index')->with('danger', 'Operación no permitida');
         }
         if ($roleName <> 'super-admin') {

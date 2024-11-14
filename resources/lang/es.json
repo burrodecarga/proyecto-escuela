@@ -41,6 +41,7 @@
     "list of roles": "listado de roles",
     "role edit": "modificar rol",
     "role create": "crear rol",
+    "add role": "crear rol",
     "role name": "nombre del rol",
     "role show": "detalles del rol",
     "assignable permissions": "permisos asignados",

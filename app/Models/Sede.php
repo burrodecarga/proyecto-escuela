@@ -53,10 +53,10 @@ class Sede extends Model
         return $this->belongsToMany(Grado::class)->withPivot('numero', 'letra')->orderby('grado_id');
     }
 
-    // public function coordinadores()
-    // {
-    //     return $this->belongsToMany(User::class);
-    // }
+    public function coordinadores()
+    {
+        return $this->belongsToMany(User::class);
+    }
 
     // public function teachers()
     // {

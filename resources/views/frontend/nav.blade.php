@@ -10,8 +10,6 @@
             <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
 
             <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="{{ route('administrator.index') }}"
-                class="nav-item nav-link text-uppercase">{{ _('administrator') }}</a>
             @include('frontend.security')
             @include('frontend.infraestructure')
             @include('frontend.academy')

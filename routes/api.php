@@ -13,7 +13,7 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/users', function (Request $request) {
     return datatables()->of(User::with('roles'))
-        ->addColumn('btn', 'superadmin.users.actions')
+        ->addColumn('btn', 'config.users.actions')
         ->rawColumns(['btn'])
         ->toJson();
 });

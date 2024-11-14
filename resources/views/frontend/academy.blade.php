@@ -1,4 +1,3 @@
- @canRole('roles')
  <div class="nav-item dropdown">
      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
          style="text-transform: uppercase">{{ __('academy') }}</a>
@@ -7,4 +6,3 @@
              style="text-transform: uppercase">{{ __('grados') }}</a>
      </div>
  </div>
- @endcanRole

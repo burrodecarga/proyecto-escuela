@@ -1,14 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Superadmin\UserController;
-use App\Http\Controllers\Superadmin\SedeController;
-use App\Http\Controllers\Superadmin\SchoolController;
-use App\Http\Controllers\Superadmin\RoomController;
-use App\Http\Controllers\Superadmin\RoleController;
-use App\Http\Controllers\Superadmin\ResourceController;
-use App\Http\Controllers\Superadmin\PermissionController;
-use App\Http\Controllers\Superadmin\GradoController;
+use App\Http\Controllers\Config\UserController;
+use App\Http\Controllers\Config\SedeController;
+use App\Http\Controllers\Config\SchoolController;
+use App\Http\Controllers\Config\RoomController;
+use App\Http\Controllers\Config\RoleController;
+use App\Http\Controllers\Config\ResourceController;
+use App\Http\Controllers\Config\PermissionController;
+use App\Http\Controllers\Config\GradoController;
 
 
 Route::resource('roles', RoleController::class)->names('roles');

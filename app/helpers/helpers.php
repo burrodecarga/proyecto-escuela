@@ -1,10 +1,10 @@
 <?php
 
-const MINIMO_ROLE_ORIGINAL = 13;
+const MINIMO_ROLE_ORIGINAL = 14;
 const EDIT_ROLE_ORIGINAL = 2;
 
-define('SECCION', array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'));
-define('NUMERO_DE_SECCION',array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24));
+define('SECCION', array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'));
+define('NUMERO_DE_SECCION', array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24));
 define('DIA', array('domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'));
 define('MES', array('enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'));
 define('RECURSOS', array('recurso académico', 'recurso físico', 'recurso tecnológico', 'insumo industrial', 'recurso deportivo', 'recurso bibliográfico', 'recurso de laboratorio'));
@@ -18,13 +18,14 @@ function price($value)
 function getStringBetween($str)
 {
     $from = 'src="';
-$to = '"';
-    $sub = substr($str, strpos($str,$from)+strlen($from),strlen($str));
-    return substr($sub,0,strpos($sub,$to));
+    $to = '"';
+    $sub = substr($str, strpos($str, $from) + strlen($from), strlen($str));
+    return substr($sub, 0, strpos($sub, $to));
 }
 
 
-function isValidYoutubeURL($url) {
+function isValidYoutubeURL($url)
+{
 
     // Let's check the host first
     $parse = parse_url($url);
@@ -34,7 +35,7 @@ function isValidYoutubeURL($url) {
     }
 
     $ch = curl_init();
-    $oembedURL = 'www.youtube.com/oembed?url=' . urlencode($url).'&format=json';
+    $oembedURL = 'www.youtube.com/oembed?url=' . urlencode($url) . '&format=json';
     curl_setopt($ch, CURLOPT_URL, $oembedURL);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
@@ -51,7 +52,8 @@ function isValidYoutubeURL($url) {
         return false;
 }
 
-function isEmbeddableYoutubeURL($url) {
+function isEmbeddableYoutubeURL($url)
+{
 
     // Let's check the host first
     $parse = parse_url($url);
@@ -61,7 +63,7 @@ function isEmbeddableYoutubeURL($url) {
     }
 
     $ch = curl_init();
-    $oembedURL = 'www.youtube.com/oembed?url=' . urlencode($url).'&format=json';
+    $oembedURL = 'www.youtube.com/oembed?url=' . urlencode($url) . '&format=json';
     curl_setopt($ch, CURLOPT_URL, $oembedURL);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     $output = curl_exec($ch);
@@ -69,8 +71,10 @@ function isEmbeddableYoutubeURL($url) {
 
     $data = json_decode($output);
 
-    if (!$data) return false; // Either 404 or 401 (Unauthorized)
-    if (!$data->{'html'}) return false; // Embeddable video MUST have 'html' provided
+    if (!$data)
+        return false; // Either 404 or 401 (Unauthorized)
+    if (!$data->{'html'})
+        return false; // Embeddable video MUST have 'html' provided
 
     return true;
 }

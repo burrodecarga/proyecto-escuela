@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Superadmin;
+namespace App\Http\Controllers\Config;
 
 use App\Http\Requests\UpdateUserRequest;
 use Spatie\Permission\Models\Role;
@@ -15,7 +15,7 @@ class UserController extends Controller
 {
     public function index(): View
     {
-        return view('superadmin.users.index');
+        return view('config.users.index');
     }
 
     public function edit(User $user)
@@ -25,7 +25,7 @@ class UserController extends Controller
         $computer_user_role_id = $computer_user->roles->pluck("id")->first();
         $role = $user->roles->first();
         if ($role->id < EDIT_ROLE_ORIGINAL) {
-            return redirect()->route('users.index')->with('success', 'Operación no permitida');
+            return redirect()->route('users.index')->with('warning', 'Operación no permitida');
         }
         if ($computer_user_role_name <> 'super-admin') {
 
@@ -36,7 +36,7 @@ class UserController extends Controller
         $roles = Role::where('id', '>=', EDIT_ROLE_ORIGINAL)->get();
         $title = __("user edit");
         $btn = __("edit");
-        return view('superadmin.users.edit', compact('user', 'title', 'btn', 'roles', 'userRoleId'));
+        return view('config.users.edit', compact('user', 'title', 'btn', 'roles', 'userRoleId'));
     }
 
     public function update(UpdateUserRequest $request, user $user)
@@ -113,7 +113,7 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('superadmin.users.create');
+        return view('config.users.create');
     }
 
 }

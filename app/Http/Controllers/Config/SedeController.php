@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Superadmin;
+namespace App\Http\Controllers\Config;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Sede;
 use App\Models\School;
@@ -169,8 +170,20 @@ class SedeController extends Controller
 
     public function coordinator(Sede $sede)
     {
-        $users = User::where('rol', 'cordinator')->get();
+        $users = User::where('rol', 'coordinator')->get();
         //dd($users);
-        return view('superadmin.sedes.cordinator', compact('sede', 'users'));
+        return view('superadmin.sedes.coordinator', compact('sede', 'users'));
+    }
+
+    public function assign(Request $request)
+    {
+        $sede = Sede::find($request->sede_id);
+        $user = User::find($request->user_id);
+        $user->coordina()->sync([$sede->id => ['rol' => 'coordinator']]);
+        $message = 'Usuario asignado como administrador de escuela';
+        return redirect()->route('sedes.index')->with('success', $message);
+
+
+
     }
 }

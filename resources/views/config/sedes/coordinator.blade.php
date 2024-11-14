@@ -21,9 +21,9 @@
                 <table id="user" class="table text-sm table-hover" style="width:100%">
                     <thead>
                         <tr style="text-align: justify">
-                            <th width="10%">{{ __('id') }}</th>
+                            <th width="10%" style="text-align: center">{{ __('id') }}</th>
                             <th width="25%">{{ __('name') }}</th>
-                            <th width="25%">{{ __('cédula') }}</th>
+                            <th width="25%" style="text-align: justify">{{ __('cédula') }}</th>
                             <th width="15%">{{ __('phone') }}</th>
                             <th width="10%">{{ __('role') }}</th>
                             <th width="15%" style="text-align: center">actions</th>
@@ -32,16 +32,15 @@
                     <tbody class="text-left">
                         @foreach ($users as $user)
                             <tr>
-                                <th width="10%">{{ $user->id }}</th>
+                                <th width="10%" style="text-align: center">{{ $user->id }}</th>
                                 <th width="25%">{{ $user->name }} </th>
-                                <th width="25%">{{ $user->cedula }} </th>
-                                {{-- <th width="30%">Address</th> --}}
+                                <th width="25%" style="text-align: justify">{{ $user->cedula }} </th>
                                 <th width="15%">{{ $user->phone }} </th>
                                 <th width="10%">{{ $user->rol }}</th>
                                 <th width="15%" style="text-align: center">
-                                    <form action="{{ route('schools.assign') }}" method="POST" class="form-asignar">
+                                    <form action="{{ route('sedes.assign') }}" method="POST" class="form-asignar">
                                         <input type="hidden" name="user_id" value="{{ $user->id }}">
-                                        <input type="hidden" name="school_id" value="{{ $school->id }}">
+                                        <input type="hidden" name="sede_id" value="{{ $sede->id }}">
                                         @csrf
                                         @method('POST')
                                         <button type="submit"><i
@@ -65,7 +64,7 @@
             $(document).ready(function() {
                 $('#user').DataTable({
                     "columnDefs": [{
-                        "targets": [2],
+                        "targets": [5],
                         "orderable": false
                     }],
                     language: {
@@ -88,7 +87,7 @@
 
 
                     Swal.fire({
-                        title: 'Desea asignar el coordinador de la escuela?',
+                        title: 'Desea asignar el coordinador de la sede escolar?',
                         text: "Esta operación es totalmente modificable",
                         icon: 'question',
                         showCancelButton: true,

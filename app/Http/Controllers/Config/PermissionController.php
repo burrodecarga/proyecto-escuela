@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Superadmin;
+namespace App\Http\Controllers\Config;
 
 use Spatie\Permission\Models\Permission;
 use Illuminate\Routing\Controllers\Middleware;

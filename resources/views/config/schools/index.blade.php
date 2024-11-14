@@ -42,8 +42,8 @@
                                 <td width="15%">{{ $school->nit }}</td>
                                 <td width="15%" style="text-align: justify">{{ $school->dane }}</td>
                                 <td width="20%">{{ $school->administrator_name }}</td>
-                                <td width="" class="flex justify-around w-full mx-auto text-center"> <a
-                                        href="{{ route('schools.administrator', $school->id) }}" class="text-green-600"
+                                <td width="" class="flex justify-around w-full mx-auto text-center">
+                                    <a href="{{ route('schools.administrator', $school->id) }}" class="text-green-600"
                                         title="{{ __('assign administrator to school') }}">
                                         <i class="fa-solid fa-user-tie"></i>
                                     </a>

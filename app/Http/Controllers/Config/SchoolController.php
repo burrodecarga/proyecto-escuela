@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Superadmin;
+namespace App\Http\Controllers\Config;
 
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Str;
@@ -20,7 +20,7 @@ class SchoolController extends Controller
     public function index()
     {
         $schools = School::all();
-        return view('superadmin.schools.index', compact('schools'));
+        return view('config.schools.index', compact('schools'));
     }
 
     /**
@@ -31,7 +31,7 @@ class SchoolController extends Controller
         $school = new School();
         $title = "school create";
         $btn = "create";
-        return view('superadmin.schools.create', compact('school', 'btn', 'title'));
+        return view('config.schools.create', compact('school', 'btn', 'title'));
     }
 
     /**
@@ -66,7 +66,7 @@ class SchoolController extends Controller
     public function show(School $school)
     {
         $sedes = $school->sedes;
-        return view('superadmin.schools.show', compact('school', 'sedes'));
+        return view('config.schools.show', compact('school', 'sedes'));
     }
 
     /**
@@ -76,7 +76,7 @@ class SchoolController extends Controller
     {
         $title = "school edit";
         $btn = "edit";
-        return view('superadmin.schools.edit', compact('school', 'btn', 'title'));
+        return view('config.schools.edit', compact('school', 'btn', 'title'));
     }
 
     /**
@@ -132,7 +132,7 @@ class SchoolController extends Controller
         $school = School::find($id);
         $sedes = $school->sedes;
 
-        return view('superadmin.schools.sede', compact('sedes', 'school'));
+        return view('config.schools.sede', compact('sedes', 'school'));
     }
 
 
@@ -141,7 +141,7 @@ class SchoolController extends Controller
         //$users = Role::user('administrator')->get();
         $users = User::where('rol', 'administrator')->get();
         //dd($users);
-        return view('superadmin.schools.administrator', compact('school', 'users'));
+        return view('config.schools.administrator', compact('school', 'users'));
     }
 
     public function assign(Request $request)
@@ -157,8 +157,5 @@ class SchoolController extends Controller
         $school->save();
         $message = 'Usuario asignado como administrador de escuela';
         return redirect()->route('schools.index')->with('success', $message);
-
-
-
     }
 }
