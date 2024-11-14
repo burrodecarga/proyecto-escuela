@@ -4,8 +4,8 @@
             {{ __('permission adminitration panel') }}</h2>
     </x-slot>
 
-    <div class="container mt-10">
-        <div class="w-1/2 mx-auto text-center card md:w-1/2 min-w-12">
+    <div class="w-[450px] mx-auto mt-10">
+        <div class="w-full mx-auto text-center card">
             <div class="text-white card-header bg-primary">
                 <div class="flex items-center justify-between card-title">
                     <h4>
@@ -54,6 +54,7 @@
         <script>
             $(document).ready(function() {
                 $('#permission').DataTable({
+                    responsive: true,
                     "columnDefs": [{
                         "targets": [2],
                         "orderable": false
@@ -64,11 +65,8 @@
                         infoFiltered: '(filtro de _MAX_ total)',
                         lengthMenu: 'Ver _MENU_ reg. por pag.',
                         zeroRecords: 'No hay registros',
-                        entries: {
-                            _: 'roles',
-                            1: 'rol',
-                        }
-                    }
+                    },
+                    pagingType: "full"
 
                 });
                 setTimeout(function() {
