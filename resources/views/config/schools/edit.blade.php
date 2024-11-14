@@ -7,7 +7,7 @@
             <hr>
             <form action="{{ route('schools.update', $school->id) }}" method="POST" enctype="multipart/form-data">
                 @method('PUT')
-                @include('superadmin.schools.partials.form')
+                @include('config.schools.partials.form')
             </form>
         </div>
     </div>

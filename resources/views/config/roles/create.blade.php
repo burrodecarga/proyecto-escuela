@@ -5,8 +5,8 @@
                 <strong>{{ $title }}</strong>
             </h1>
             <form action="{{ route('roles.store') }}" method="POST">
-                @include('superadmin.roles.partials.form')
-                @include('superadmin.roles.partials.permissions')
+                @include('config.roles.partials.form')
+                @include('config.roles.partials.permissions')
             </form>
         </div>
     </div>

@@ -7,7 +7,7 @@
             <hr>
             <form action="{{ route('rooms.store') }}" method="POST" enctype="multipart/form-data">
                 @method('POST')
-                @include('superadmin.rooms.partials.form_edit')
+                @include('config.rooms.partials.form_edit')
             </form>
         </div>
     </div>

@@ -6,8 +6,8 @@
             </h1>
             <form action="{{ route('roles.update', $role->id) }}" method="POST">
                 @method('PUT')
-                @include('superadmin.roles.partials.form')
-                @include('superadmin.roles.partials.permissions')
+                @include('config.roles.partials.form')
+                @include('config.roles.partials.permissions')
             </form>
         </div>
     </div>

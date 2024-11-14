@@ -13,7 +13,7 @@
                     <x-input-error for="name" />
                 </div>
                 <div class="mb-4">
-                    @include('superadmin.roles.partials.permissions')
+                    @include('config.roles.partials.permissions')
                 </div>
 
                 <a type="button" href="{{ route('roles.index') }}"

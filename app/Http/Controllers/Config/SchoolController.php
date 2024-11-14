@@ -49,7 +49,7 @@ class SchoolController extends Controller
 
         if ($request->file('url')) {
 
-            $file = $request->file('url')->store('public/schools');
+            $file = $request->file('url')->store('schools');
             $url = Storage::url($file);
             //$school->images()->create(['url' => $url,]);
             $school->logo = $url;
@@ -100,7 +100,7 @@ class SchoolController extends Controller
                 }
             }
 
-            $file = $request->file('url')->store('public/schools');
+            $file = $request->file('url')->store('schools');
             $url = Storage::url($file);
             //$school->images()->create(['url' => $url,]);
             $school->logo = $url;

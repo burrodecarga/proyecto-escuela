@@ -33,7 +33,7 @@ class RoleController extends Controller
     public function index()
     {
         $roles = Role::all();
-        return view('superadmin.roles.index', compact('roles'));
+        return view('config.roles.index', compact('roles'));
     }
 
     /**
@@ -46,7 +46,7 @@ class RoleController extends Controller
         $title = __("role create");
         $btn = __("create");
         $permissions_id = [];
-        return view('superadmin.roles.create', compact('permissions', 'role', 'btn', 'permissions_id', 'title'));
+        return view('config.roles.create', compact('permissions', 'role', 'btn', 'permissions_id', 'title'));
     }
 
     /**
@@ -76,7 +76,7 @@ class RoleController extends Controller
         $title = __("role show");
         $btn = "show";
         $permissions_id = $role->permissions->pluck('id')->toArray();
-        return view('superadmin.roles.show', compact('permissions', 'role', 'btn', 'permissions_id', 'title'));
+        return view('config.roles.show', compact('permissions', 'role', 'btn', 'permissions_id', 'title'));
     }
 
     /**
@@ -88,7 +88,7 @@ class RoleController extends Controller
         $title = __("role edit");
         $btn = __("update");
         $permissions_id = $role->permissions->pluck('id')->toArray();
-        return view('superadmin.roles.edit', compact('permissions', 'role', 'btn', 'permissions_id', 'title'));
+        return view('config.roles.edit', compact('permissions', 'role', 'btn', 'permissions_id', 'title'));
     }
 
     /**

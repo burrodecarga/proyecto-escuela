@@ -15,7 +15,7 @@ class ResourceController extends Controller
     public function index()
     {
         $resources = Resource::all();
-        return view('superadmin.resources.index', compact('resources'));
+        return view('config.resources.index', compact('resources'));
     }
 
     /**
@@ -59,7 +59,7 @@ class ResourceController extends Controller
         $categories = RECURSOS;
         $title = "room edit";
         $btn = "update resource";
-        return view('superadmin.resources.edit', compact('categories', 'resource', 'btn', 'title'));
+        return view('config.resources.edit', compact('categories', 'resource', 'btn', 'title'));
     }
 
     /**

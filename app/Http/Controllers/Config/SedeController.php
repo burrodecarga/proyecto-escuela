@@ -21,7 +21,7 @@ class SedeController extends Controller
     public function index()
     {
         $sedes = Sede::all();
-        return view('superadmin.sedes.index', compact('sedes'));
+        return view('config.sedes.index', compact('sedes'));
     }
 
     /**
@@ -35,7 +35,7 @@ class SedeController extends Controller
         $sede = new Sede();
         $sede->logo = Sede::FOTO;
         $sede->image = Sede::SCHOOL;
-        return view('superadmin.sedes.create', compact('schools', 'title', 'sede', 'btn'));
+        return view('config.sedes.create', compact('schools', 'title', 'sede', 'btn'));
     }
 
     /**
@@ -87,7 +87,7 @@ class SedeController extends Controller
      */
     public function show(sede $sede)
     {
-        return view('superadmin.sedes.show', compact('sede'));     //
+        return view('config.sedes.show', compact('sede'));     //
     }
 
     /**
@@ -98,7 +98,7 @@ class SedeController extends Controller
         $schools = School::orderBy('name')->get();
         $title = __('edit sede');
         $btn = _('edit');
-        return view('superadmin.sedes.edit', compact('schools', 'title', 'sede', 'btn'));
+        return view('config.sedes.edit', compact('schools', 'title', 'sede', 'btn'));
     }
 
     /**
@@ -172,7 +172,7 @@ class SedeController extends Controller
     {
         $users = User::where('rol', 'coordinator')->get();
         //dd($users);
-        return view('superadmin.sedes.coordinator', compact('sede', 'users'));
+        return view('config.sedes.coordinator', compact('sede', 'users'));
     }
 
     public function assign(Request $request)

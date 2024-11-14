@@ -6,7 +6,7 @@
             </h1>
 
             <form action="{{ route('grados.store') }}" method="POST" enctype="multipart/form-data">
-                @include('superadmin.grados.partials.form')
+                @include('config.grados.partials.form')
             </form>
         </div>
     </div>

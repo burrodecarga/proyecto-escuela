@@ -7,7 +7,7 @@
             <hr>
             <form action="{{ route('grados.update', $grado->id) }}" method="POST" enctype="multipart/form-data">
                 @method('PUT')
-                @include('superadmin.grados.partials.form')
+                @include('config.grados.partials.form')
             </form>
         </div>
     </div>

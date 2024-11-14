@@ -7,7 +7,7 @@
             <hr>
             <form action="{{ route('rooms.update', $room->id) }}" method="POST" enctype="multipart/form-data">
                 @method('PUT')
-                @include('superadmin.rooms.partials.form_edit')
+                @include('config.rooms.partials.form_edit')
             </form>
         </div>
     </div>

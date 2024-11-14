@@ -15,7 +15,7 @@ class GradoController extends Controller
     public function index()
     {
         $grados = Grado::all();
-        return view('superadmin.grados.index', compact('grados'));
+        return view('config.grados.index', compact('grados'));
     }
 
     /**
@@ -27,7 +27,7 @@ class GradoController extends Controller
         $grado = new Grado();
         $title = "grado create";
         $btn = "create";
-        return view('superadmin.grados.create', compact('grado', 'btn', 'title'));
+        return view('config.grados.create', compact('grado', 'btn', 'title'));
     }
 
     /**
@@ -64,7 +64,7 @@ class GradoController extends Controller
         }
         $title = "grado edit";
         $btn = "update";
-        return view('superadmin.grados.edit', compact('grado', 'btn', 'title'));
+        return view('config.grados.edit', compact('grado', 'btn', 'title'));
     }
 
     /**

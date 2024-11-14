@@ -30,6 +30,6 @@ class PermissionController extends Controller
     public function index()
     {
         $permissions = Permission::all();
-        return view('superadmin.permissions.index', compact('permissions'));
+        return view('config.permissions.index', compact('permissions'));
     }
 }

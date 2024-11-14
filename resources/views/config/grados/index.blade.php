@@ -2,8 +2,6 @@
     @push('css')
     @endpush
     <x-slot name="header">
-
-
         <h2 class="w-full text-xl font-semibold capitalize sm:w-full md:w-3/4">{{ __('grado adminitration panel') }}
         </h2>
     </x-slot>
@@ -50,7 +48,7 @@
                                 <td class="flex gap-4 text-center" width="">
                                     <a href="{{ route('grados.edit', $grado->id) }}"
                                         title="{{ __('edit grado') . ' ' . $grado->name }}"><i
-                                            class="text-blue-500 icono fa-solid fa-newspaper"></i></a>
+                                            class="text-blue-500 icono fa-solid fa-pencil"></i></a>
                                     <form action="{{ route('grados.destroy', $grado->id) }}" method="POST"
                                         class="form-delete">
                                         @csrf
@@ -93,7 +91,7 @@
 
                 $('.form-delete').submit(function(e) {
                     e.preventDefault();
-                    //alert('delete action')
+                    alert('delete action')
 
                     Swal.fire({
                         title: 'Está seguro de querer eliminar escuela?',

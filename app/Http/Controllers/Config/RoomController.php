@@ -16,7 +16,7 @@ class RoomController extends Controller
     public function index()
     {
         $rooms = Room::with('sede')->get();
-        return view('superadmin.rooms.index', compact('rooms'));
+        return view('config.rooms.index', compact('rooms'));
     }
 
     /**
@@ -28,7 +28,7 @@ class RoomController extends Controller
         $btn = "create room";
         $room = new Room();
         $sedes = Sede::all();
-        return view('superadmin.rooms.create', compact('room', 'btn', 'title', 'sedes'));
+        return view('config.rooms.create', compact('room', 'btn', 'title', 'sedes'));
     }
 
     /**
@@ -74,7 +74,7 @@ class RoomController extends Controller
         $title = "room edit";
         $btn = "update room";
         $sedes = Sede::all();
-        return view('superadmin.rooms.edit', compact('room', 'btn', 'title', 'sedes'));
+        return view('config.rooms.edit', compact('room', 'btn', 'title', 'sedes'));
     }
 
     /**
@@ -118,6 +118,6 @@ class RoomController extends Controller
     //     $room = Room::find($id);
     //     $title = "add resource to room";
     //     $btn = "add resource";
-    //     return view('superadmin.rooms.resource', compact('categories', 'resource', 'room', 'btn', 'title'));
+    //     return view('config.rooms.resource', compact('categories', 'resource', 'room', 'btn', 'title'));
     // }
 }

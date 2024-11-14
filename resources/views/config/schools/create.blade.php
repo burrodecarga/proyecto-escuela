@@ -6,7 +6,7 @@
             </h1>
 
             <form action="{{ route('schools.store') }}" method="POST" enctype="multipart/form-data">
-                @include('superadmin.schools.partials.form')
+                @include('config.schools.partials.form')
             </form>
         </div>
     </div>

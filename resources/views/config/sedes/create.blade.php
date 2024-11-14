@@ -5,7 +5,7 @@
                 {{ __('create sede to school') }}</h2>
 
             <form action="{{ route('sedes.store') }}" method="POST" enctype="multipart/form-data">
-                @include('superadmin.sedes.partials.form')
+                @include('config.sedes.partials.form')
             </form>
         </div>
     </div>
