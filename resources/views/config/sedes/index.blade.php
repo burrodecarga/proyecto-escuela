@@ -1,5 +1,5 @@
 <x-app-layout>
-    <link rel="stylesheet" href="{{ asset('css/tableAlto.css') }} ">
+
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
 
     <x-slot name="header">
@@ -8,15 +8,14 @@
         </h2>
     </x-slot>
 
-    <div class="p-10 mt-0">
+    <div class="w-11/12 mx-auto mt-0">
         <div class="w-full mx-auto text-center card">
             <div class="text-white card-header bg-primary">
                 <div class="flex items-center justify-between card-title">
-                    <h4>
+                    <h4 class="text-white">
                         {{ __('list of school locations') }}
                     </h4>
-                    <a href="{{ route('sedes.create') }}" class="text-white cursor-pointer"
-                        title="{{ __('add sede') }}">
+                    <a href="{{ route('sedes.create') }}" class="text-white cursor-pointer" title="{{ __('add sede') }}">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -26,7 +25,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <table id="sede" class="table text-sm table-hover" style="width:100%">
+                <table id="sede" class="table text-sm table-hover responsive" style="width:100%">
                     <thead>
                         <tr>
                             <th class="text-sm text-left uppercase">{{ __('school') }}/{{ __('sede') }}</th>
@@ -85,8 +84,8 @@
         <script>
             $(document).ready(function() {
                 $('#sede').DataTable({
-                    "responsive": true,
-                    "pagingType": "full_numbers",
+                    responsive: true,
+                    pagingType: "full_numbers",
                     language: {
                         info: 'Pag. _PAGE_ de _PAGES_, reg.:_MAX_',
                         infoEmpty: 'No hay regiastros diponibles',
@@ -100,6 +99,8 @@
                         "orderable": false
                     }]
                 });
+
+
                 $('.form-delete').submit(function(e) {
 
                     e.preventDefault();

@@ -4,11 +4,11 @@
             {{ __('role adminitration panel') }}</h2>
     </x-slot>
 
-    <div class="w-[450px] mx-auto mt-10">
+    <div class="w-[550px] mx-auto mt-10">
         <div class="w-full mx-auto text-center card">
             <div class="text-white card-header bg-primary">
                 <div class="flex items-center justify-between card-title">
-                    <h4>
+                    <h4 class="text-white">
                         {{ __('list of roles') }}
                     </h4>
 
@@ -72,19 +72,11 @@
         <script>
             $(document).ready(function() {
                 $('#role').DataTable({
-                    responsive: true,
-                    "columnDefs": [{
-                        "targets": [2],
-                        "orderable": false
-                    }],
-                    language: {
-                        info: 'Mostrando pag. _PAGE_ of _PAGES_',
-                        infoEmpty: 'No hay regiastros diponibles',
-                        infoFiltered: '(filtro de _MAX_ total)',
-                        lengthMenu: 'Ver _MENU_ reg. por pag.',
-                        zeroRecords: 'No hay registros',
-                    },
+
                 });
+
+
+
                 setTimeout(function() {
                     $('#alert').remove()
                 }, 300);
@@ -105,13 +97,7 @@
                         confirmButtonText: 'Si, Eliminar!'
                     }).then((result) => {
                         if (result.isConfirmed) {
-
                             this.submit();
-                            // Swal.fire(
-                            //   'Deleted!',
-                            //   'Your file has been deleted.',
-                            //   'success'
-                            // )
                         }
                     })
                 });

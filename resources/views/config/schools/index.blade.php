@@ -8,7 +8,7 @@
         <div class="w-full mx-auto text-center card">
             <div class="text-white card-header bg-primary">
                 <div class="flex items-center justify-between uppercase">
-                    <h4>
+                    <h4 class="text-white">
                         {{ __('list of schools') }}
                     </h4>
 
@@ -94,15 +94,10 @@
 
 
     @push('script')
-        {{-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script> --}}
-
-
-
         <script>
             $(document).ready(function() {
                 $('#school').DataTable({
+                    responsive: true,
                     "columnDefs": [{
                         "targets": [5],
                         "orderable": false

@@ -10,7 +10,7 @@
         <div class="mx-auto text-center w-5/4 card">
             <div class="text-white card-header bg-primary">
                 <div class="flex items-center justify-between card-title">
-                    <h4>
+                    <h4 class="text-white">
                         {{ __('list of sedes') . ' ' . $school->name }}
                     </h4>
 

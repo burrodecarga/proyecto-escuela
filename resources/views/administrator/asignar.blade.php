@@ -8,10 +8,10 @@
         <div class="w-full mx-auto text-center card md:w-100">
             <div class="text-white card-header bg-primary">
                 <div class="flex items-center justify-between card-title">
-                    <h4>
+                    <h4 class="text-white">
                         {{ __('list of candidates') }}
                     </h4>
-                    <h4>
+                    <h4 class="text-white">
                         {{ $school->name }}
                     </h4>
 

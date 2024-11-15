@@ -10,7 +10,7 @@
         <div class="w-full mx-auto text-center card">
             <div class="text-white card-header bg-primary">
                 <div class="flex items-center justify-between card-title">
-                    <h4>
+                    <h4 class="text-white">
                         {{ __('list of resources') }}
                     </h4>
 

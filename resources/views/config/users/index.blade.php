@@ -8,7 +8,7 @@
         <div class="w-full mx-auto text-center card md:w-100">
             <div class="text-white card-header bg-primary">
                 <div class="flex items-center justify-between card-title">
-                    <h4>
+                    <h4 class="text-white">
                         {{ __('list of users') }}
                     </h4>
 
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <table id="user" class="table text-sm table-hover" style="width:100%">
+                <table id="user" class="table text-sm table-hover responsive" style="width:100%">
                     <thead>
                         <tr>
                             <th width="10%">Id</th>
@@ -51,7 +51,7 @@
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     }
                 });
-                $('#user').DataTable({
+                table = $('#user').DataTable({
                     "responsive": true,
                     "columnDefs": [{
                         "targets": [5],
@@ -63,11 +63,7 @@
                         infoEmpty: 'No hay regiastros diponibles',
                         infoFiltered: '(filtro de _MAX_ total)',
                         lengthMenu: 'Ver _MENU_ reg. por pag.',
-                        zeroRecords: 'No hay registros',
-                        entries: {
-                            _: 'usuarios',
-                            1: 'usuario',
-                        }
+                        zeroRecords: 'No hay registros'
                     },
 
                     "serverSide": true,
@@ -95,6 +91,7 @@
                     ]
 
                 });
+
                 setTimeout(function() {
                     $('#alert').remove()
                 }, 3000);
