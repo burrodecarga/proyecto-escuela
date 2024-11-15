@@ -104,6 +104,10 @@
                     })
                 });
 
+                $(function() {
+                    $(document).tooltip();
+                });
+
             });
         </script>
     @endpush

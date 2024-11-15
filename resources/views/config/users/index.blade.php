@@ -1,4 +1,6 @@
 <x-app-layout>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+
     <x-slot name="header">
         <h2 class="w-full text-[clamp(14px,1.1vw,44px)] font-semibold uppercase sm:w-full md:w-3/4">
             {{ __('user adminitration panel') }}</h2>
@@ -125,6 +127,9 @@
 
                 })
 
+            });
+            $(function() {
+                $(document).tooltip();
             });
         </script>
     @endpush

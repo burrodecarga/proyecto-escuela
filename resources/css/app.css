@@ -67,7 +67,6 @@
 		border: 0;
 	}
 
-	,
 	.btn-primary {
 		@apply font-bold py-2 px-4 rounded;
 	}
@@ -97,9 +96,9 @@
 	.btn-success:hover {
 		@apply bg-green-700;
 	}
-	,
-    /* purgecss start ignore */
-.livewire-pagination {
+
+	/* purgecss start ignore */
+	.livewire-pagination {
 		@apply inline-block w-auto ml-auto float-right;
 	}
 	ul.pagination {

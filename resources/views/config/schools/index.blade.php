@@ -1,4 +1,6 @@
 <x-app-layout>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+
     <x-slot name="header">
         <h2 class="w-full text-[clamp(14px,1.1vw,44px)] font-semibold uppercase sm:w-full md:w-3/4">
             {{ __('school adminitration panel') }}</h2>
@@ -28,8 +30,7 @@
                         <tr style="text-align: justify">
                             <th style="text-align: center">{{ __('id') }}</th>
                             <th>{{ __('name') }}</th>
-                            <th>{{ __('nit') }}</th>
-                            <th style="text-align: justify">{{ __('dane') }}</th>
+                            <th>{{ __('nit') }} /{{ __('dane') }}</th>
                             <th>{{ __('administrator') }}</th>
                             <th class="text-center"> {{ __('action') }}</th>
                         </tr>
@@ -38,32 +39,23 @@
                         @foreach ($schools as $school)
                             <tr style="text-align: justify">
                                 <td width="10%" style="text-align: center">{{ $school->id }}</td>
-                                <td width="30%">{{ $school->name }}</td>
-                                <td width="15%">{{ $school->nit }}</td>
-                                <td width="15%" style="text-align: justify">{{ $school->dane }}</td>
+                                <td width="25%">{{ $school->name }}</td>
+                                <td width="15%">{{ $school->nit }}<br>
+                                    {{ $school->dane }}</td>
                                 <td width="20%">{{ $school->administrator_name }}</td>
-                                <td width="" class="flex justify-around w-full mx-auto text-center">
-                                    <a href="{{ route('schools.administrator', $school->id) }}" class="text-green-600"
-                                        title="{{ __('assign administrator to school') }}">
-                                        <i class="fa-solid fa-user-tie"></i>
+                                <td width=""
+                                    class="grid items-center justify-between grid-cols-1 gap-3 text-center md:grid-cols-2">
+                                    <a class="block" href="{{ route('schools.administrator', $school->id) }}"
+                                        class="text-green-600" title="{{ __('assign administrator to school') }}">
+                                        <i class="fa-solid icono fa-user-tie"></i>
                                     </a>
-                                    <a href="{{ route('schools.show', $school->id) }}" class="text-green-600"
-                                        title="{{ __('view detail of school') }}">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                        </svg>
+                                    <a class="block" href="{{ route('schools.show', $school->id) }}"
+                                        class="text-green-600" title="{{ __('view detail of school') }}">
+                                        <i class="fa-solid icono fa-eye"></i>
                                     </a>
-                                    <a href="{{ route('schools.edit', $school->id) }}"
+                                    <a class="block" href="{{ route('schools.edit', $school->id) }}"
                                         title="{{ __('edit school') }}">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                                        </svg>
+                                        <i class="fa-solid icono fa-pencil"></i>
                                     </a>
 
                                     <form action="{{ route('schools.destroy', $school->id) }}" method="POST"
@@ -71,11 +63,7 @@
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M12 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M3 12l6.414 6.414a2 2 0 001.414.586H19a2 2 0 002-2V7a2 2 0 00-2-2h-8.172a2 2 0 00-1.414.586L3 12z" />
-                                            </svg>
+                                            <i class="fa-solid icono fa-trash"></i>
                                         </button>
 
                                     </form>
@@ -99,7 +87,7 @@
                 $('#school').DataTable({
                     responsive: true,
                     "columnDefs": [{
-                        "targets": [5],
+                        "targets": [4],
                         "orderable": false
                     }],
                     language: {
@@ -133,13 +121,11 @@
                         if (result.isConfirmed) {
 
                             this.submit();
-                            // Swal.fire(
-                            //   'Deleted!',
-                            //   'Your file has been deleted.',
-                            //   'success'
-                            // )
                         }
                     })
+                });
+                $(function() {
+                    $(document).tooltip();
                 });
 
             });

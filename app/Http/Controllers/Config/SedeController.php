@@ -133,8 +133,9 @@ class SedeController extends Controller
             $file = $request->file('logo')->store('schools');
             $url = Storage::url($file);
             $sede->logo = $url;
-            $sede->save();
         }
+        //dd($sede->name);
+        $sede->save();
 
 
         if ($request->file('image')) {

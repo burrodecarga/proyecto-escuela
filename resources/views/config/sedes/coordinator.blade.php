@@ -44,7 +44,7 @@
                                         @csrf
                                         @method('POST')
                                         <button type="submit"><i
-                                                title="{{ __('assign admin') . ' : ' . $user->name }}"
+                                                title="{{ __('assign coordinator') . ' : ' . $user->name }}"
                                                 class="text-blue-500 icono fa-solid fa-user-tie"></i></button>
                                     </form>
                                 </th>
@@ -101,6 +101,10 @@
 
                         }
                     })
+                });
+
+                $(function() {
+                    $(document).tooltip();
                 });
 
             });

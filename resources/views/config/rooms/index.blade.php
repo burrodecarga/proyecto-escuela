@@ -51,7 +51,7 @@
                                 <td class="flex gap-4 text-center" width="">
                                     <a href="{{ route('rooms.edit', $room->id) }}"
                                         title="{{ __('edit room') . ' ' . $room->name }}"><i
-                                            class="text-blue-500 icono fa-solid fa-pen-to-square"></i></a>
+                                            class="text-blue-500 icono fa-solid fa-pencil"></i></a>
                                     <form id="{{ $room->id }}" action="{{ route('rooms.destroy', $room->id) }}"
                                         method="POST" class="form-delete">
                                         @csrf
@@ -72,6 +72,7 @@
         <script>
             $(document).ready(function() {
                 $('#room').DataTable({
+                    responsive: true,
                     "columnDefs": [{
                         "targets": [8],
                         "orderable": false
@@ -106,16 +107,12 @@
                         if (result.isConfirmed) {
 
                             this.submit();
-                            // Swal.fire(
-                            //   'Deleted!',
-                            //   'Your file has been deleted.',
-                            //   'success'
-                            // )
                         }
                     })
-
-
                 })
+                $(function() {
+                    $(document).tooltip();
+                });
             })
         </script>
     @endpush

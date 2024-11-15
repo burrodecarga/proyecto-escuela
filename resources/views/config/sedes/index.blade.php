@@ -28,17 +28,17 @@
                 <table id="sede" class="table text-sm table-hover responsive" style="width:100%">
                     <thead>
                         <tr>
-                            <th class="text-sm text-left uppercase">{{ __('school') }}/{{ __('sede') }}</th>
-                            <th class="text-sm text-left uppercase">{{ __('department') }}</th>
-                            <th class="text-sm text-left uppercase">{{ __('municipality') }}</th>
-                            <th class="text-sm text-left uppercase">{{ __('coordinators') }}</th>
+                            <th class="text-base text-left uppercase">{{ __('school') }}/{{ __('sede') }}</th>
+                            <th class="text-base text-left uppercase">{{ __('department') }}</th>
+                            <th class="text-base text-left uppercase">{{ __('municipality') }}</th>
+                            <th class="text-base text-left uppercase">{{ __('coordinators') }}</th>
                             <th class="text-center uppercase"> {{ __('action') }}</th>
                         </tr>
                     </thead>
                     <tbody class="text-sm">
                         @foreach ($sedes as $sede)
-                            <tr class="odd:bg-slate-100">
-                                <td width="25%" class="text-xs text-left">
+                            <tr class="text-base odd:bg-slate-100">
+                                <td width="25%" class="text-left">
                                     {{ $sede->school }}<br>{{ $sede->name }}</td>
                                 <td width="15%" class="text-left">{{ $sede->department }}</td>
                                 <td width="15%" class="text-left">{{ $sede->municipality }}</td>
@@ -50,7 +50,7 @@
                                     @endforelse
 
                                 </td>
-                                <td class="grid grid-cols-1 gap-3 md:grid-cols-3">
+                                <td class="grid grid-cols-1 gap-3 md:grid-cols-2">
                                     <a href="{{ route('sedes.coordinator', $sede->id) }}" class="text-green-600"
                                         title="{{ __('assign manager to the school headquarters') }}">
                                         <i class="fa-solid icono fa-user-tie"></i>
