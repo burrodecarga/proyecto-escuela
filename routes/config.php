@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\PeriodoController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\Config\UserController;
 use App\Http\Controllers\Config\SedeController;
 use App\Http\Controllers\Config\SchoolController;
@@ -17,6 +19,10 @@ Route::resource('schools', SchoolController::class)->names('schools');
 Route::resource('sedes', SedeController::class)->names('sedes');
 Route::resource('rooms', RoomController::class)->names('rooms');
 Route::resource('resources', ResourceController::class)->names('resources');
+Route::resource('periodos', PeriodoController::class)->names('periodos');
+
+Route::resource('courses', CourseController::class)->names('courses');
+
 
 Route::resource('grados', GradoController::class)->names('grados');
 

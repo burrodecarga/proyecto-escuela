@@ -35,6 +35,8 @@ class DatabaseSeeder extends Seeder
         $this->call(GradoSeeder::class);
         $this->call(SedeSeeder::class);
         $this->call(RoomSeeder::class);
+        $this->call(CategorySeeder::class);
+        $this->call(CourseSeeder::class);
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }
