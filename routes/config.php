@@ -30,5 +30,10 @@ Route::get('administrator/{school}', [SchoolController::class, 'administrator'])
 Route::post('schools/assign', [SchoolController::class, 'assign'])->name('schools.assign');
 
 Route::get('coordinator/{sede}', [SedeController::class, 'coordinator'])->name('sedes.coordinator');
+Route::get('coordinator/resource/{sede}', [SedeController::class, 'resource'])->name('sedes.resource');
 
 Route::post('assign', [SedeController::class, 'assign'])->name('sedes.assign');
+
+Route::post('assign_resource', [SedeController::class, 'assign_resource'])->name('sedes.assign_resource');
+
+Route::get('coordinator/resource_room/{room}', [RoomController::class, 'resource'])->name('rooms.resource');

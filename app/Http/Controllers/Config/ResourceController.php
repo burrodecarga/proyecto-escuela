@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\Config;
 
+use App\Models\Room;
+use Illuminate\Http\Request;
+use App\Models\Sede;
 use App\Models\Resource;
 use App\Http\Requests\UpdateResourceRequest;
 use App\Http\Requests\StoreResourceRequest;
@@ -21,8 +24,25 @@ class ResourceController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
+        // dd($request->all());
+        if ($request->input('resourceable_type') == 'App\Models\Sede') {
+            $resourceable_type = 'App\Models\Sede';
+        }
+        if ($request->input('resourceable_type') == 'App\Models\Room') {
+            $resourceable_type = 'App\Models\Room';
+        }
+
+        //dd($resourceable_type);
+        $resourceable_id = $request->input('resourceable_id');
+        $ubication = $request->input('ubication');
+        $title = __('create resource');
+        $btn = __('resource add');
+        $categories = RECURSOS;
+        $resource = new Resource();
+        return view('config.resources.create', compact('resourceable_id', 'resourceable_type', 'ubication', 'btn', 'title', 'categories', 'resource'));
+
 
     }
 
@@ -34,10 +54,12 @@ class ResourceController extends Controller
         //dd($request->all());
         $resource = Resource::create([
             'name' => mb_strtolower($request->input('name')),
-            //'room_id' => mb_strtolower($request->input('room_id')),
             'category' => mb_strtolower($request->input('category')),
             'description' => mb_strtolower($request->input('description')),
+            'ubication' => mb_strtolower($request->input('ubication')),
             'quantity' => mb_strtolower($request->input('quantity')),
+            'resourceable_id' => $request->input('resourceable_id'),
+            'resourceable_type' => $request->input('resourceable_type'),
         ]);
         $message = __('resource created successfully');
         return redirect()->route('resources.index')->with('success', $message);
@@ -56,6 +78,7 @@ class ResourceController extends Controller
      */
     public function edit(Resource $resource)
     {
+        dd($resource);
         $categories = RECURSOS;
         $title = "room edit";
         $btn = "update resource";

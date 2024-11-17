@@ -15,10 +15,11 @@ return new class extends Migration {
             $table->string('category');
             $table->string('name');
             $table->text('description');
+            $table->text('ubication');
             $table->string('image')->nullable();
             $table->integer('quantity')->default(1);
-            $table->unsignedBigInteger('resouceable_id');
-            $table->string('resouceable_type');
+            $table->unsignedBigInteger('resourceable_id');
+            $table->string('resourceable_type');
             $table->timestamps();
         });
     }

@@ -22,12 +22,11 @@
                 </div>
             </div>
             <div class="card-body">
-                <table id="room" class="table text-xs table-striped" style="width:100%;">
+                <table id="room" class="table text-base table-striped table-hoover" style="width:100%;">
                     <thead>
                         <tr>
                             <th>{{ __('num') }}</th>
-                            <th>{{ __('school') }}</th>
-                            <th>{{ __('sede') }}</th>
+                            <th>{{ __('school') }}/{{ __('sede') }}</th>
                             <th>{{ __('room') }}</th>
                             <th class="text-center">{{ __('width') }}</th>
                             <th class="text-center">{{ __('long') }}</th>
@@ -40,15 +39,19 @@
                         @foreach ($rooms as $room)
                             <tr class="odd:bg-slate-100">
                                 <td width="5%" class="text-center">{{ $room->id }}</td>
-                                <td width="25%" class="text-left">{{ $room->sede->school }}</td>
-                                <td width="25%" class="text-left">{{ $room->sede->name }}</td>
+                                <td width="25%" class="text-left">{{ $room->sede->school }}<br>
+                                    {{ $room->sede->name }}</td>
                                 <td width="20%" class="text-left">{{ $room->name }}</td>
                                 <td width="5%" class="text-center">{{ $room->width }}</td>
                                 <td width="5%" class="text-center">{{ $room->long }}</td>
                                 <td width="5%" class="text-center">{{ $room->high }}</td>
                                 <td width="10%" class="text-center">{{ $room->capacity }} <span
                                         class="text-sm">{{ __('people') }}</span></td>
-                                <td class="flex gap-4 text-center" width="">
+                                <td class="grid grid-cols-2 gap-4 text-center" width="">
+                                    <a href="{{ route('rooms.resource', $room->id) }}" class="text-green-600"
+                                        title="{{ __('assign resource to the room headquarters') }}">
+                                        <i class="fa-solid icono fa-compass-drafting"></i>
+                                    </a>
                                     <a href="{{ route('rooms.edit', $room->id) }}"
                                         title="{{ __('edit room') . ' ' . $room->name }}"><i
                                             class="text-blue-500 icono fa-solid fa-pencil"></i></a>
@@ -74,7 +77,7 @@
                 $('#room').DataTable({
                     responsive: true,
                     "columnDefs": [{
-                        "targets": [8],
+                        "targets": [7],
                         "orderable": false
                     }],
                     language: {

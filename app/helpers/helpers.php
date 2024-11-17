@@ -79,6 +79,7 @@ function isEmbeddableYoutubeURL($url)
     return true;
 }
 
+
 // $url = 'http://www.youtube.com/watch?v=QH2-TGUlwu4';
 // echo isValidYoutubeURL($url) ? 'Valid, ': 'Not Valid, ';
 // echo isEmbeddableYoutubeURL($url) ? 'Embeddable ': 'Not Embeddable ';

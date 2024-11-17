@@ -10,6 +10,9 @@ class Resource extends Model
         'name',
         'category',
         'description',
+        'ubication',
         'quantity',
+        'resourceable_id',
+        'resourceable_type',
     ];
 }

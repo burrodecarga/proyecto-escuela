@@ -8,7 +8,7 @@
             <form action="{{ route('resources.update', $resource->id) }}" method="POST" enctype="multipart/form-data">
                 @method('PUT')
                 <input type="hidden" name="resource_id" value="{{ $resource->id }}" />
-                @include('super.resources.partials.form_resource')
+                @include('config.resources.partials.form_resource')
             </form>
         </div>
     </div>

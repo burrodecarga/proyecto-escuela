@@ -405,5 +405,7 @@
     "assign sede administrator to": "asignar administrador de la sede escolar a",
     "assign admin": "asignar como administrador a",
     "assign coordinator": "asignar como coordinador a",
-    "edit room": "modificar espacio"
+    "edit room": "modificar espacio",
+    "create resource": "crear recurso",
+    "resource add": "agreagar recurso"
 }

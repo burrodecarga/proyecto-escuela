@@ -55,6 +55,10 @@
                                         title="{{ __('assign manager to the school headquarters') }}">
                                         <i class="fa-solid icono fa-user-tie"></i>
                                     </a>
+                                    <a href="{{ route('sedes.resource', $sede->id) }}" class="text-green-600"
+                                        title="{{ __('assign resource to the school headquarters') }}">
+                                        <i class="fa-solid icono fa-compass-drafting"></i>
+                                    </a>
                                     <a href="{{ route('sedes.show', [$sede->id]) }}"
                                         title="{{ __('view detail of sede') . ' ' . $sede->name }}"><i
                                             class="text-blue-500 icono fa-solid fa-eye"></i></a>

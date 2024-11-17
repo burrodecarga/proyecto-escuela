@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Config;
 
 use App\Models\Sede;
 use App\Models\Room;
+use App\Models\Resource;
 use App\Http\Requests\UpdateRoomRequest;
 use App\Http\Requests\StoreRoomRequest;
 use App\Http\Controllers\Controller;
@@ -67,7 +68,6 @@ class RoomController extends Controller
      */
     public function edit(Room $room)
     {
-        //dd($room->id);
         if ($room->id <= -20) {
             abort(403);
         }
@@ -111,13 +111,17 @@ class RoomController extends Controller
         return redirect()->route('rooms.index')->with('success', $message);
     }
 
-    // public function create_resource($id)
-    // {
-    //     $resource = new Resource();
-    //     $categories = RECURSOS;
-    //     $room = Room::find($id);
-    //     $title = "add resource to room";
-    //     $btn = "add resource";
-    //     return view('config.rooms.resource', compact('categories', 'resource', 'room', 'btn', 'title'));
-    // }
+    public function resource(Room $room)
+    {
+        //dd($room);
+        $resourceable_type = 'App\Models\Room';
+        $resourceable_id = $room->id;
+        $ubication = $room->name;
+        $title = __('create resource');
+        $btn = __('resource add');
+        $categories = RECURSOS;
+        $resource = new Resource();
+        return view('config.resources.create', compact('resourceable_id', 'resourceable_type', 'ubication', 'btn', 'title', 'categories', 'resource'));
+    }
+
 }

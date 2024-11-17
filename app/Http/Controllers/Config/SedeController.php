@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Sede;
 use App\Models\School;
+use App\Models\Resource;
 use App\Http\Requests\UpdateSedeRequest;
 use App\Http\Requests\StoreSedeRequest;
 use App\Http\Controllers\Controller;
@@ -179,6 +180,31 @@ class SedeController extends Controller
     public function assign(Request $request)
     {
         $sede = Sede::find($request->sede_id);
+        $user = User::find($request->user_id);
+        $user->coordina()->sync([$sede->id => ['rol' => 'coordinator']]);
+        $message = 'Usuario asignado como administrador de escuela';
+        return redirect()->route('sedes.index')->with('success', $message);
+
+
+
+    }
+
+    public function resource(Sede $sede)
+    {
+        $resourceable_type = 'App\Models\Sede';
+        $resourceable_id = $sede->id;
+        $ubication = $sede->name;
+        $title = __('create resource');
+        $btn = __('resource add');
+        $categories = RECURSOS;
+        $resource = new Resource();
+        return view('config.resources.create', compact('resourceable_id', 'resourceable_type', 'ubication', 'btn', 'title', 'categories', 'resource'));
+    }
+
+    public function assign_resource(Request $request)
+    {
+        $sede = Sede::find($request->sede_id);
+        dd('XX');
         $user = User::find($request->user_id);
         $user->coordina()->sync([$sede->id => ['rol' => 'coordinator']]);
         $message = 'Usuario asignado como administrador de escuela';
