@@ -44,10 +44,10 @@ class Course extends Model
     //     return $this->hasOne(Level::class);
     // }
 
-    // public function sections()
-    // {
-    //     return $this->hasMany(Section::class);
-    // }
+    public function sections()
+    {
+        return $this->hasMany(Section::class);
+    }
 
 
 

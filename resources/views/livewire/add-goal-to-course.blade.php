@@ -65,8 +65,8 @@
             @endforeach
         </ul>
     </article>
-    @include('components.modales.editRequerimentModal')
-    @include('components.modales.confirmRequerimentModal')
+    @include('components.modales.editGoalModal')
+    @include('components.modales.confirmGoalModal')
 
     @push('script')
         <script>

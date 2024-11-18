@@ -48,3 +48,6 @@ Route::get('requeriment/{course}', [CourseController::class, 'requeriment'])->na
 
 Route::get('goal/{course}', [CourseController::class, 'goal'])->name('courses.goal');
 
+Route::get('section/{course}', [CourseController::class, 'section'])->name('courses.section');
+
+

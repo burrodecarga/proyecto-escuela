@@ -128,4 +128,10 @@ class CourseController extends Controller
         $goals = $course->goals;
         return view('config.courses.goal', compact('course', 'goals'));
     }
+
+    public function section(Course $course)
+    {
+        $sections = $course->sections;
+        return view('config.courses.section', compact('course', 'sections'));
+    }
 }

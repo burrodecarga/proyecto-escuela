@@ -71,7 +71,7 @@
 
                                     </a>
 
-                                    <a href="{{ route('courses.edit', $course->id) }}">
+                                    <a href="{{ route('courses.section', $course->id) }}">
                                         <i class="text-blue-500 icono fa-solid fa-person-chalkboard"></i>
 
                                     </a>
