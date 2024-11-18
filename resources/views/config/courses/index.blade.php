@@ -61,12 +61,12 @@
                                         </button>
 
                                     </form>
-                                    <a href="{{ route('courses.edit', $course->id) }}"
+                                    <a href="{{ route('courses.requeriment', $course->id) }}"
                                         title="{{ __('add requeriments') . ' ' . $course->name }}">
                                         <i class="text-blue-500 icono fa-solid fa-glasses"></i>
 
                                     </a>
-                                    <a href="{{ route('courses.edit', $course->id) }}">
+                                    <a href="{{ route('courses.goal', $course->id) }}">
                                         <i class="text-blue-500 icono fa-solid fa-bullseye"></i>
 
                                     </a>

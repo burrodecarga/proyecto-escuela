@@ -116,4 +116,16 @@ class CourseController extends Controller
         $message = __('course deleted successfully');
         return redirect()->route('courses.index')->with('success', $message);
     }
+
+    public function requeriment(Course $course)
+    {
+        $requeriments = $course->requeriments;
+        return view('config.courses.requeriment', compact('course', 'requeriments'));
+    }
+
+    public function goal(Course $course)
+    {
+        $goals = $course->goals;
+        return view('config.courses.goal', compact('course', 'goals'));
+    }
 }

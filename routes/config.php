@@ -43,3 +43,8 @@ Route::post('assign', [SedeController::class, 'assign'])->name('sedes.assign');
 Route::post('assign_resource', [SedeController::class, 'assign_resource'])->name('sedes.assign_resource');
 
 Route::get('coordinator/resource_room/{room}', [RoomController::class, 'resource'])->name('rooms.resource');
+
+Route::get('requeriment/{course}', [CourseController::class, 'requeriment'])->name('courses.requeriment');
+
+Route::get('goal/{course}', [CourseController::class, 'goal'])->name('courses.goal');
+

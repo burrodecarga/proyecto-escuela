@@ -29,15 +29,15 @@ class Course extends Model
     //     ;
     // }
 
-    // public function requeriments()
-    // {
-    //     return $this->hasMany(Requeriment::class);
-    // }
+    public function requeriments()
+    {
+        return $this->hasMany(Requeriment::class);
+    }
 
-    // public function goals()
-    // {
-    //     return $this->hasMany(Goal::class);
-    // }
+    public function goals()
+    {
+        return $this->hasMany(Goal::class);
+    }
 
     // public function level()
     // {
