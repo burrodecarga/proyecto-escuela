@@ -50,4 +50,6 @@ Route::get('goal/{course}', [CourseController::class, 'goal'])->name('courses.go
 
 Route::get('section/{course}', [CourseController::class, 'section'])->name('courses.section');
 
+Route::get('lesson/{course}/{lesson}', [CourseController::class, 'lesson'])->name('courses.lesson');
+
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Str;
+use App\Models\Lesson;
 use App\Models\Grado;
 use App\Models\Course;
 use App\Http\Requests\UpdateCourseRequest;
@@ -133,5 +134,12 @@ class CourseController extends Controller
     {
         $sections = $course->sections;
         return view('config.courses.section', compact('course', 'sections'));
+    }
+
+    public function lesson(Course $course, Lesson $lesson)
+    {
+
+        $section = $lesson->section;
+        return view('config.courses.lesson', compact('course', 'lesson', 'section'));
     }
 }

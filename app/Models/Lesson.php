@@ -27,13 +27,13 @@ class Lesson extends Model
     // }
 
 
-    // public function pdfs()
-    // {
-    //     return $this->hasMany(Pdf::class);
-    // }
+    public function pdfs()
+    {
+        return $this->hasMany(Pdf::class);
+    }
 
-    // public function images()
-    // {
-    //     return $this->morphMany(Image::class, 'imageable');
-    // }
+    public function images()
+    {
+        return $this->morphMany(Image::class, 'imageable');
+    }
 }

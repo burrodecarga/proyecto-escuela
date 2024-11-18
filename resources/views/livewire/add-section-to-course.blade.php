@@ -33,15 +33,15 @@
                         <header class="flex items-center justify-between pl-3">
                             <li class="p-2 mt-1 text-left bg-white rounded-md grow">
                                 {{ $item->name }}</li>
-                            <div class="gap-4 ml-2">
+                            <div class="flex justify-around gap-2 ml-2">
 
-                                <i class="text-blue-500 cursor-pointer fa fa-edit" title="{{ __('edit section') }}"
-                                    wire:click="edit({{ $item }})"></i>
-                                <i class="text-red-500 cursor-pointer fa fa-eraser" title="{{ __('delete section') }}"
-                                    wire:click="confirm({{ $item }})"></i>
+                                <i class="text-blue-500 cursor-pointer icono fa fa-pencil"
+                                    title="{{ __('edit section') }}" wire:click="edit({{ $item }})"></i>
+                                <i class="text-red-500 cursor-pointer icono fa fa-eraser"
+                                    title="{{ __('delete section') }}" wire:click="confirm({{ $item }})"></i>
 
 
-                                <i class="text-blue-500 cursor-pointer fa fa-book"
+                                <i class="text-blue-500 cursor-pointer icono fa fa-book"
                                     title="{{ __('add lesson to section') }}"
                                     wire:click="addLesson({{ $item }})"></i>
 
@@ -58,19 +58,21 @@
                             <header class="flex items-center justify-between pl-3 font-bold">
                                 {{ $l->name }}
                                 <div class="flex items-center justify-between gap-3">
-                                    <div class="flex items-center justify-center w-6 h-6 p-3 bg-blue-400 rounded-full">
-                                        <i class="text-white cursor-pointer fa fa-edit" title="{{ __('edit lesson') }}"
+                                    <div class="flex items-center justify-center w-6 h-6 p-3 rounded-full">
+                                        <i class="text-blue-600 cursor-pointer icono fa fa-pencil"
+                                            title="{{ __('edit lesson') }}"
                                             wire:click="editLesson({{ $l->id }})"></i>
                                     </div>
-                                    <div class="flex items-center justify-center w-6 h-6 p-3 bg-blue-400 rounded-full">
-                                        <a href="# ">
-                                            <i class="text-white cursor-pointer fa-solid fa-photo-film"
+                                    <div class="flex items-center justify-center w-6 h-6 p-3 bg-blue-100 rounded-full">
+                                        <a href="{{ route('courses.lesson', [$course->id, $l->id]) }}">
+                                            <i class="text-blue-600 cursor-pointer icono fa-solid fa-photo-film"
                                                 title="{{ __('add resources') }}"></i></a>
 
                                     </div>
                                 </div>
                             </header>
-                            <p class="pl-3 text-xs text-justify text-wrap max-w-['36rem']:">{{ $l->description }}</p>
+                            <p class="my-2 pl-3 text-xs text-justify text-wrap max-w-['36rem']:">{{ $l->description }}
+                            </p>
                         </div>
                     </article>
                 @endforeach
