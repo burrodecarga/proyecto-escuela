@@ -408,5 +408,14 @@
     "edit room": "modificar espacio",
     "create resource": "crear recurso",
     "resource add": "agreagar recurso",
-    "list of sections": "lista de temas"
+    "list of sections": "lista de temas",
+    "list of grades and sections available": "listado de grados y secciones disponibles",
+    "grade and section administration panel": "panel de administración de grados y secciones",
+    "term study plan": "plan de estudio del período lectivo",
+    "view all lective courses": "ver asignaturas del período lectivo",
+    "list of subjects for the school period": "listado de asignaturas del período lectivo",
+    "school term administration panel": "panel de administración de período escolar",
+    "school period": "período escolar",
+    "Panel for assigning teachers to course": "panel de asignación de profesoras a curso",
+    "correctly assigned teacher": "profesor asignado correctamente"
 }

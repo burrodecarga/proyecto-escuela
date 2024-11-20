@@ -91,6 +91,10 @@ class User extends Authenticatable
     ];
 
     protected $attributes = [];
+    public function getFullNameAttribute()
+    {
+        return "{$this['name']} {$this['last_name']}";
+    }
 
 
     public function getAge()

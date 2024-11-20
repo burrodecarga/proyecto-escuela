@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\PeriodoController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PeriodoController;
+use App\Http\Controllers\GestionController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\Config\UserController;
 use App\Http\Controllers\Config\SedeController;
@@ -51,5 +52,26 @@ Route::get('goal/{course}', [CourseController::class, 'goal'])->name('courses.go
 Route::get('section/{course}', [CourseController::class, 'section'])->name('courses.section');
 
 Route::get('lesson/{course}/{lesson}', [CourseController::class, 'lesson'])->name('courses.lesson');
+
+Route::get('gestion', [GestionController::class, 'index'])->name('gestion.index');
+Route::get('gestion/secciones/{sede}', [GestionController::class, 'secciones'])->name('gestion.secciones');
+
+Route::get('gestion/create_lectivo/{sede}', [GestionController::class, 'create_lectivo'])->name('gestion.create_lectivo');
+
+Route::get('gestion/lectivo_by_sede/{sede}', [GestionController::class, 'lectivo_by_sede'])->name('gestion.lectivo_by_sede');
+
+Route::get('gestion/grados_by_sede/{sede}', [GestionController::class, 'grados_by_sede'])->name('gestion.grados_by_sede');
+
+
+Route::get('gestion/assign_teacher_to_lectivo/{lectivo}', [GestionController::class, 'assign_teacher_to_lectivo'])->name('gestion.assign_teacher_to_lectivo');
+
+Route::post('assign_teacher', [GestionController::class, 'assign_teacher'])->name('gestion.assign_teacher');
+
+Route::get('gestion/grados_by_lectivo_and_sede/{sede}', [GestionController::class, 'grados_by_lectivo_and_sede'])->name('gestion.grados_by_lectivo_and_sede');
+
+
+Route::post('assign_students_to_grado', [GestionController::class, 'assign_students_to_grado'])->name('gestion.assign_students_to_grado');
+
+
 
 

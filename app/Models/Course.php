@@ -18,10 +18,10 @@ class Course extends Model
 
     //protected $withCount = ['reviews'];
 
-    // public function grado()
-    // {
-    //     return $this->belongsTo(Grado::class);
-    // }
+    public function grado()
+    {
+        return $this->belongsTo(Grado::class);
+    }
 
     // public function lectivos()
     // {

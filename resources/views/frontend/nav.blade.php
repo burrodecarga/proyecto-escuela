@@ -13,6 +13,7 @@
             @include('frontend.security')
             @include('frontend.infraestructure')
             @include('frontend.academy')
+            @include('frontend.gestion')
 
             <a href="contact.html" class="nav-item nav-link">Contact</a>
         </div>
