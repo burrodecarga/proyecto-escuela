@@ -3,7 +3,7 @@
 
     </x-slot>
     <x-slot name="content">
-        <form wire:submit="delete">
+        <form wire:submit="delete" enctype="multipart/form-data">
             @csrf
             <div class="">
                 <div class="col-span-1">

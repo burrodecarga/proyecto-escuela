@@ -5,7 +5,7 @@
          <a href="{{ route('gestion.index') }}" class="dropdown-item"
              style="text-transform: uppercase">{{ __('school management') }}</a>
          <a href="{{ route('grados.index') }}" class="dropdown-item"
-             style="text-transform: uppercase">{{ __('grados') }}</a>
+             style="text-transform: uppercase">{{ __('degrees dictated') }}</a>
 
          <a href="{{ route('courses.index') }}" class="dropdown-item"
              style="text-transform: uppercase">{{ __('courses') }}</a>

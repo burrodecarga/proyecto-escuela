@@ -3,7 +3,7 @@
 
     </x-slot>
     <x-slot name="content">
-        <form wire:submit="update">
+        <form wire:submit="update" enctype="multipart/form-data">
             @csrf
             <div class="">
                 <div class="col-span-1">

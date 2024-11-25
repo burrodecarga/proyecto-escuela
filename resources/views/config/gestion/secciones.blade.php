@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="card-body">
-                @livewire('add_secion_to_grado_sede', compact('grados', 'sede'))
+                @livewire('add_secion_to_grado_sede', compact('grados', 'sede', 'periodo'))
             </div>
         </div>
     </div>

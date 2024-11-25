@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->unsignedBigInteger('grado_id');
             $table->unsignedBigInteger('sede_id');
+            $table->unsignedBigInteger('periodo_id');
             $table->integer('numero')->default(1);
             $table->string('letra')->default('A');
             $table->foreign('grado_id')->references('id')->on('grados')

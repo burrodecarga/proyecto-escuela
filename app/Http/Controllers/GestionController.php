@@ -80,4 +80,17 @@ class GestionController extends Controller
         return view('config.gestion.grados_by_sede', compact('sede', 'grados', 'periodo'));
     }
 
+    public function grados_and_sections_by_sede(Sede $sede)
+    {
+        $grados = DB::table('grado_sede')->where('sede_id', $sede->id)->get();
+
+
+    }
+
+    public function assign_students_to_grado(Lectivo $lectivo)
+    {
+        $grado = [];
+        return view('config.gestion.assign_students_to_grado', compact('grado'));
+    }
+
 }

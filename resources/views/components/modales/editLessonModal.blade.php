@@ -3,7 +3,7 @@
         <h1 class="text-sm uppercase">{{ __('edit lesson of course') }} {{ $course->name }}</h1>
     </x-slot>
     <x-slot name="content">
-        <form wire:submit="updateLesson">
+        <form wire:submit="updateLesson" enctype="multipart/form-data">
             @csrf
             <div class="grid grid-cols-1 gap-1 px-10 mb-2 rounded bg-slate-50">
                 <div class="">

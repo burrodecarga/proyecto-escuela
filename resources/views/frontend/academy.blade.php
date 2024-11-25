@@ -5,9 +5,9 @@
          <a href="{{ route('periodos.index') }}" class="dropdown-item"
              style="text-transform: uppercase">{{ __('school periods') }}</a>
          <a href="{{ route('grados.index') }}" class="dropdown-item"
-             style="text-transform: uppercase">{{ __('grados') }}</a>
+             style="text-transform: uppercase">{{ __('school grades') }}</a>
 
          <a href="{{ route('courses.index') }}" class="dropdown-item"
-             style="text-transform: uppercase">{{ __('courses') }}</a>
+             style="text-transform: uppercase">{{ __('school subjects') }}</a>
      </div>
  </div>
