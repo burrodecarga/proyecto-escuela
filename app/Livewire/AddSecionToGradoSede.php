@@ -5,6 +5,7 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Models\Sede;
 use App\Models\Periodo;
+use App\Models\Grado;
 
 class AddSecionToGradoSede extends Component
 {
@@ -28,15 +29,16 @@ class AddSecionToGradoSede extends Component
 
     public function add($id)
     {
+        $gd = Grado::find($id);
         $cantidad = $this->sede->grados()->where('grado_id', $id)->count();
         $numero = NUMERO_DE_SECCION[$cantidad];
         $letra = SECCION[$cantidad];
-        $this->sede->grados()->attach([$id => ['numero' => $numero, 'letra' => $letra, 'periodo_id' => $this->periodo->id]]);
+        $this->sede->grados()->attach([$id => ['numero' => $numero, 'letra' => $letra, 'periodo_id' => $this->periodo->id, 'grado_name' => $gd->name]]);
         $this->grados_de_sede = $this->sede->grados;
         //$this->render();
         $message = __('the action was completed successfully.');
         flash()->options([
-            'timeout' => 700,
+            'timeout' => 300,
         ])->success($message);
     }
 

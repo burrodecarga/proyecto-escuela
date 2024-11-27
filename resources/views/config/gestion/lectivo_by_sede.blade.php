@@ -48,11 +48,7 @@
                                         <i class="fa-solid icono fa-chalkboard-user"></i>
                                     </a>
 
-                                    <a href="{{ route('gestion.grados_by_lectivo_and_sede', $l->sede_id) }}"
-                                        class="text-red-600"
-                                        title="{{ __('add students to grado') . ' ' . $l->grado_name . '  ' . $l->grado_name . '  ' . __('section') . ' ' . $l->letra }}">
-                                        <i class="fa-solid icono fa-users"></i>
-                                    </a>
+
                                 </td>
                             </tr>
                         @endforeach
@@ -82,7 +78,7 @@
                     },
 
                     "columnDefs": [{
-                        "targets": [],
+                        "targets": [3],
                         "orderable": false
                     }]
                 });

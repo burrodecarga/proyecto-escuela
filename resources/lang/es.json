@@ -422,5 +422,10 @@
     "school subjects": "asignaturas escolares",
     "school management": "gestión escolar",
     "degrees dictated": "grados que se dictan",
-    "add multiple grado to the school headquarters": "agregar secciones a grados en la sede"
+    "add multiple grado to the school headquarters": "agregar secciones a grados en la sede",
+    "panel for assigning students to grado": "panel de asignación de estudiantes a grado",
+    "list of selected": "lista de seleccionados",
+    "sedes management panel": "panel de administración de sedes",
+    "the user is already registered in this period": "el usuario ya está registrado en este período",
+    "last_name": "apellido"
 }

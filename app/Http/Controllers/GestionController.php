@@ -18,6 +18,11 @@ class GestionController extends Controller
         $periodo = Periodo::where('current', 1)->first();
         if ($periodo === null) {
             $message = __('no school period selected');
+            flash()->options([
+                'timeout' => 1500,
+                'position' => 'top-center'
+            ])->warning($message);
+
             return redirect()->back()->with('error', $message);
         }
         return view('config.gestion.index', compact('sedes', 'periodo'));
@@ -77,6 +82,8 @@ class GestionController extends Controller
     {
         $periodo = Periodo::where('current', 1)->first();
         $grados = $sede->grados;
+        //$grados = DB::table('lectivos')->select('grado_id', 'grado_name', 'letra')->groupBy('grado_id', 'grado_name', 'letra')->get();
+        //dd($grados);
         return view('config.gestion.grados_by_sede', compact('sede', 'grados', 'periodo'));
     }
 
@@ -87,10 +94,19 @@ class GestionController extends Controller
 
     }
 
-    public function assign_students_to_grado(Lectivo $lectivo)
+    public function assign_students_to_grado(User $user, $gs)
     {
-        $grado = [];
+        dd($user->name, $gs);
         return view('config.gestion.assign_students_to_grado', compact('grado'));
+    }
+
+
+    public function add_students_to_grados_by_sede($gs)
+    {
+        $grado_sede = DB::table('grado_sede')->where('id', $gs)->first();
+        $grado = Grado::find($grado_sede->grado_id);
+        $users = User::all();
+        return view('config.gestion.add_students_to_grados_by_sede', compact('grado_sede', 'users', 'grado'));
     }
 
 }

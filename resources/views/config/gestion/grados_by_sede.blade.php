@@ -31,32 +31,24 @@
                             <th>{{ __('ordinal') }}</th>
                             <th>{{ __('grado') }}</th>
                             <th>{{ __('level') }}</th>
-                            <th>{{ __('fullname') }}</th>
-                            <th>{{ __('fullordinal') }}</th>
+                            <th class="text-center">{{ __('seccion') }}</th>
+                            <th>{{ __('students') }}</th>
                             <th>{{ __('action') }}</th>
                         </tr>
                     </thead>
                     <tbody class="text-sm">
                         @foreach ($grados as $grado)
                             <tr class="odd:bg-slate-100">
-                                <td width="5%" class="text-left">{{ $grado->id }}</td>
+                                <td width="5%" class="text-left">{{ $grado->pivot->id . ' ' . $grado->id }}</td>
                                 <td width="5%" class="text-left">{{ $grado->ordinal }}</td>
                                 <td width="20%" class="text-left">{{ $grado->name }}</td>
                                 <td width="20%" class="text-left">{{ $grado->level }}</td>
-                                <td width="20%" class="text-sm text-left">{{ $grado->full_name }}</td>
-                                <td width="20%" class="text-sm text-left">{{ $grado->full_ordinal }}</td>
+                                <td width="20%" class="text-sm text-center">{{ $grado->pivot->letra }}</td>
+                                <td width="20%" class="text-sm text-left">{{ $grado->pivot->letra }}</td>
                                 <td class="flex gap-4 text-center" width="">
-                                    <a href="{{ route('grados.edit', $grado->id) }}"
-                                        title="{{ __('edit grado') . ' ' . $grado->name }}"><i
-                                            class="text-blue-500 icono fa-solid fa-pencil"></i></a>
-                                    <form action="{{ route('grados.destroy', $grado->id) }}" method="POST"
-                                        class="form-delete">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit"><i
-                                                title="{{ __('delete grado') . ' : ' . $grado->name }}"
-                                                class="text-red-500 icono fa-solid fa-trash-can"></i></button>
-                                    </form>
+                                    <a href="{{ route('gestion.add_students_to_grados_by_sede', $grado->pivot->id) }}"
+                                        title="{{ __('add students to grado') . ' ' . $grado->name }}"><i
+                                            class="text-blue-500 icono fa-solid fa-users"></i></a>
 
                                 </td>
 

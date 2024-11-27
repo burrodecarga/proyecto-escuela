@@ -10,17 +10,17 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('grado_sede', function (Blueprint $table) {
+        Schema::create('lectivo_user', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('grado_id');
-            $table->unsignedBigInteger('sede_id');
             $table->unsignedBigInteger('periodo_id');
+            $table->unsignedBigInteger('sede_id');
+            $table->unsignedBigInteger('grado_id');
             $table->integer('numero')->default(1);
-            $table->string('grado_name');
             $table->string('letra')->default('A');
+            $table->unsignedBigInteger('user_id');
             $table->foreign('grado_id')->references('id')->on('grados')
                 ->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('sede_id')->references('id')->on('sedes')
+            $table->foreign('user_id')->references('id')->on('users')
                 ->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
@@ -31,6 +31,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('grado_sede');
+        Schema::dropIfExists('lectivo_user');
     }
 };

@@ -50,7 +50,7 @@ class Sede extends Model
 
     public function grados()
     {
-        return $this->belongsToMany(Grado::class)->withPivot('numero', 'letra')->orderby('grado_id');
+        return $this->belongsToMany(Grado::class)->withPivot('numero', 'letra', 'id')->orderby('grado_id');
     }
 
     public function coordinadores()
