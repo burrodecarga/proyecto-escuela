@@ -16,10 +16,13 @@ return new class extends Migration {
             $table->unsignedBigInteger('periodo_id');
             $table->unsignedBigInteger('sede_id');
             $table->unsignedBigInteger('grado_id');
+            $table->string('periodo_name')->nullable();
+            $table->string('grado_name')->nullable();
             $table->integer('numero')->default(1);
             $table->string('letra')->default('A');
             $table->string('name');
             $table->string('last_name')->nullable();
+            $table->integer('cedula')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->foreign('grado_id')->references('id')->on('grados')
                 ->onDelete('cascade')->onUpdate('cascade');

@@ -5,6 +5,7 @@ namespace App\Livewire;
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
+use App\Models\Periodo;
 use App\Models\Grado;
 
 class AddStudentsToGrado extends Component
@@ -25,7 +26,6 @@ class AddStudentsToGrado extends Component
     {
 
         $this->seleccionados = DB::table('grado_student')->where('pivot_grado_sede_id', $this->grado_sede->id)->get();
-
         return view('livewire.add-students-to-grado');
     }
 
@@ -39,21 +39,26 @@ class AddStudentsToGrado extends Component
                 'timeout' => 1500,
             ])->warning($message);
         } else {
-
+            $periodo = Periodo::find($this->grado_sede->periodo_id);
             DB::table('grado_student')
                 ->insert(
                     [
                         'pivot_grado_sede_id' => $this->grado_sede->id,
                         'grado_id' => $this->grado_sede->grado_id,
                         'periodo_id' => $this->grado_sede->periodo_id,
+                        'grado_name' => $this->grado_sede->grado_name,
+                        'periodo_name' => $periodo->lapso,
                         'sede_id' => $this->grado_sede->sede_id,
                         'numero' => $this->grado_sede->numero,
                         'letra' => $this->grado_sede->letra,
                         'user_id' => $user->id,
                         'name' => $user->name,
                         'last_name' => $user->last_name,
+                        'cedula' => $user->cedula,
                     ]
                 );
+
+            return redirect(request()->header('Referer'));
         }
     }
 
@@ -70,6 +75,8 @@ class AddStudentsToGrado extends Component
         flash()->options([
             'timeout' => 1500,
         ])->success($message);
+
+        return redirect(request()->header('Referer'));
 
     }
 }

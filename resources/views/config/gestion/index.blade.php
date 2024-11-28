@@ -62,8 +62,12 @@
                                         title="{{ __('config grados by sede') . ' ' . $sede->name }}"><i
                                             class="text-blue-500 icono fa-solid fa-users-rectangle"></i></a>
 
-                                    <a href="{{ route('sedes.edit', [$sede->id]) }}"
+                                    <a href="{{ route('gestion.students_of_sede', [$sede->id]) }}"
                                         title="{{ __('students of sede') . ' ' . $sede->name }}"><i
+                                            class="text-blue-500 icono fa-solid fa-graduation-cap"></i></a>
+
+                                    <a href="{{ route('gestion.courses_of_sede', [$sede->id]) }}"
+                                        title="{{ __('test manegement') . ' ' . $sede->name }}"><i
                                             class="text-blue-500 icono fa-solid fa-graduation-cap"></i></a>
                                     <form action="{{ route('sedes.destroy', $sede->id) }}" method="POST"
                                         class="text-red-600 form-delete">

@@ -65,6 +65,7 @@
                             <th width="10%">{{ __('id') }}</th>
                             <th width="25%">{{ __('name') }}</th>
                             <th width="25%">{{ __('last_name') }}</th>
+                            <th width="25%">{{ __('cedula') }}</th>
                             <th width="15%" style="text-align: center">actions</th>
                         </tr>
                     </thead>
@@ -74,6 +75,7 @@
                                 <th width="10%">{{ $seleccionado->user_id }}</th>
                                 <th width="25%">{{ $seleccionado->name }} </th>
                                 <th width="20%">{{ $seleccionado->last_name }} </th>
+                                <th width="20%">{{ $seleccionado->cedula }} </th>
                                 <th width="15%" style="text-align: center">
                                     <a class="cursor-pointer"
                                         wire:click="delStudent({{ $seleccionado->user_id }} , {{ $grado_sede->id }})"
@@ -107,7 +109,7 @@
                 });
                 $('#selected').DataTable({
                     "columnDefs": [{
-                        "targets": [3],
+                        "targets": [4],
                         "orderable": false
                     }],
                     language: {

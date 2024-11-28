@@ -8,6 +8,9 @@
              style="text-transform: uppercase">{{ __('degrees dictated') }}</a>
 
          <a href="{{ route('courses.index') }}" class="dropdown-item"
-             style="text-transform: uppercase">{{ __('courses') }}</a>
+             style="text-transform: uppercase">{{ __('course management') }}</a>
+
+         <a href="{{ route('courses.index') }}" class="dropdown-item"
+             style="text-transform: uppercase">{{ __('test management') }}</a>
      </div>
  </div>

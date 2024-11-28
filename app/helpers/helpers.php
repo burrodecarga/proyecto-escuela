@@ -84,4 +84,24 @@ function isEmbeddableYoutubeURL($url)
 // echo isValidYoutubeURL($url) ? 'Valid, ': 'Not Valid, ';
 // echo isEmbeddableYoutubeURL($url) ? 'Embeddable ': 'Not Embeddable ';
 
+function valorarNota($nota): string
+{
+    switch ($nota) {
+        case $nota >= 0 && $nota <= 2.5:
+            $result = __('low');
+            break;
+        case $nota >= 2.6 && $nota <= 5:
+            $result = __('basic');
+            break;
+        case $nota >= 5.1 && $nota <= 7.5:
+            $result = __('high');
+            break;
+        case $nota >= 7.6 && $nota <= 10:
+            $result = __('superior');
+            break;
+        default:
+            $result = 'none';
+    }
 
+    return $result;
+}

@@ -135,4 +135,9 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Sede::class);
     }
+
+    public function tests()
+    {
+        return $this->hasMany(Test::class);
+    }
 }

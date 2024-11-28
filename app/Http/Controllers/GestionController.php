@@ -109,4 +109,11 @@ class GestionController extends Controller
         return view('config.gestion.add_students_to_grados_by_sede', compact('grado_sede', 'users', 'grado'));
     }
 
+    public function students_of_sede(Sede $sede)
+    {
+        $users = DB::table('grado_student')->where('sede_id', $sede->id)->orderBy('last_name', 'asc')->orderBy('name', 'asc')->get();
+        return view('config.gestion.students_of_sede', compact('users'));
+
+    }
+
 }

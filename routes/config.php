@@ -76,6 +76,12 @@ Route::get('gestion/grados_by_lectivo_and_sede/{sede}', [GestionController::clas
 
 Route::get('assign_students_to_grado/{user}/{grado}', [GestionController::class, 'assign_students_to_grado'])->name('gestion.assign_students_to_grado');
 
+Route::get('students_of_sede/{sede}', [GestionController::class, 'students_of_sede'])->name('gestion.students_of_sede');
+
+
+Route::get('courses_of_sede/{sede}', [GestionController::class, 'courses_of_sede'])->name('gestion.courses_of_sede');
+
+
 
 
 
