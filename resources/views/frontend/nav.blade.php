@@ -1,5 +1,5 @@
 <nav class="p-0 bg-white shadow navbar navbar-expand-lg navbar-light sticky-top">
-    <a href="index.html" class="px-4 navbar-brand d-flex align-items-center px-lg-5">
+    <a href="{{ url('/home') }}" class="px-4 navbar-brand d-flex align-items-center px-lg-5">
         <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>José Mario Garzón</h2>
     </a>
     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -9,7 +9,7 @@
         <div class="p-4 navbar-nav ms-auto p-lg-0">
             <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
 
-            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="{{ route('about') }}" class="nav-item nav-link">About</a>
             @include('frontend.security')
             @include('frontend.infraestructure')
             @include('frontend.academy')

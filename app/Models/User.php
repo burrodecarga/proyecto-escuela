@@ -140,4 +140,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Test::class);
     }
+
+    public function lectivos()
+    {
+        return $this->hasMany(Lectivo::class);
+    }
 }

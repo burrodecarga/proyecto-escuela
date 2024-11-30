@@ -10,10 +10,12 @@ class Test extends Model
         'lectivo_id',
         'user_id',
         'user_name',
+        'fecha',
+        'lapso',
         'type',
         'percentage',
-        'fecha',
         'result',
+        'final',
         'scale',
 
     ];
@@ -21,5 +23,10 @@ class Test extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function lectivo()
+    {
+        return $this->belongsTo(Lectivo::class);
     }
 }

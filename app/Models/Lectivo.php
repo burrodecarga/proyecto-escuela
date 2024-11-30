@@ -66,4 +66,14 @@ class Lectivo extends Model
     {
         return $this->hasMany(Course::class, 'course_id');
     }
+
+    public function tests()
+    {
+        return $this->hasMany(Test::class);
+    }
+
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
 }

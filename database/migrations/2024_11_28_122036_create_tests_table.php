@@ -15,10 +15,12 @@ return new class extends Migration {
             $table->unsignedBigInteger('lectivo_id');
             $table->unsignedBigInteger('user_id');
             $table->string('user_name');
+            $table->dateTime('fecha');
+            $table->unsignedBigInteger('lapso')->default(1);
             $table->string('type')->default('test');
             $table->decimal('percentage', 8, 2)->default(100);
-            $table->dateTime('fecha');
             $table->decimal('result', 8, 2)->default(0);
+            $table->decimal('final', 8, 2)->default(0);
             $table->string('scale')->nullable();
             $table->foreign('lectivo_id')->references('id')->on('lectivos')
                 ->onDelete('cascade')->onUpdate('cascade');
