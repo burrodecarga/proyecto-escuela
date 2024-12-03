@@ -1,5 +1,5 @@
 <div class="pt-5 mt-5 container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
+    <div class="container py-5 bg-dark">
         <div class="row g-5">
             <div class="col-lg-3 col-md-6">
                 <h4 class="mb-3 text-white">Quick Link</h4>
@@ -61,7 +61,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container bg-dark">
         <div class="copyright">
             <div class="row">
                 <div class="mb-3 text-center col-md-6 text-md-start mb-md-0">

@@ -7,15 +7,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="p-4 navbar-nav ms-auto p-lg-0">
-            <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
-
-            <a href="{{ route('about') }}" class="nav-item nav-link">About</a>
             @include('frontend.security')
             @include('frontend.infraestructure')
             @include('frontend.academy')
             @include('frontend.gestion')
-
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
         </div>
         <div class="nav-item dropdown">
             @auth
