@@ -427,5 +427,14 @@
     "list of selected": "lista de seleccionados",
     "sedes management panel": "panel de administración de sedes",
     "the user is already registered in this period": "el usuario ya está registrado en este período",
-    "last_name": "apellido"
+    "last_name": "apellido",
+    "list of courses": "listado de asignaturas",
+    "detail of": "detalles de",
+    "add requeriments": "agregar requerimientos a",
+    "add goals": "agregar objetivos a",
+    "add topic": "agregar temas a",
+    "no teacher": "sin profesor asignado",
+    "add teacher to course": "agregar profesor a la asignatura",
+    "config grados by sede": "configurar grados de la sede",
+    "students of sede": "estudiantes de la sede"
 }

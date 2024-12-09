@@ -66,12 +66,14 @@
                                         <i class="text-blue-500 icono fa-solid fa-glasses"></i>
 
                                     </a>
-                                    <a href="{{ route('courses.goal', $course->id) }}">
+                                    <a href="{{ route('courses.goal', $course->id) }}"
+                                        title="{{ __('add goals') . ' ' . $course->name }}">
                                         <i class="text-blue-500 icono fa-solid fa-bullseye"></i>
 
                                     </a>
 
-                                    <a href="{{ route('courses.section', $course->id) }}">
+                                    <a href="{{ route('courses.section', $course->id) }}"
+                                        title="{{ __('add topic') . ' ' . $course->name }}">
                                         <i class="text-blue-500 icono fa-solid fa-person-chalkboard"></i>
 
                                     </a>

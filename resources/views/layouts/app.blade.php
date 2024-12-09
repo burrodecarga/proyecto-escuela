@@ -30,13 +30,20 @@
     <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/edw.css') }}" rel="stylesheet">
+
     @livewireStyles
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{ asset('css/dataTables.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/responsive.dataTables.min.css') }}" />
+    {{-- <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" /> --}}
+    <link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap5.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/jquery-ui.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 
     @stack('styles')
 
-    @include('layouts.link')
+
 
 
 
@@ -83,6 +90,8 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
+
+
 </body>
 
 </html>
