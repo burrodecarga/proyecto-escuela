@@ -1,6 +1,6 @@
 <nav class="p-0 bg-white shadow navbar navbar-expand-lg navbar-light sticky-top">
     <a href="{{ url('/home') }}" class="px-4 navbar-brand d-flex align-items-center px-lg-5">
-        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>José Mario Garzón</h2>
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>EduLink</h2>
     </a>
     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
