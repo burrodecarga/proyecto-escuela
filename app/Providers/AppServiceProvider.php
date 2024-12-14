@@ -30,5 +30,19 @@ class AppServiceProvider extends ServiceProvider
             //dd($value,$permissions);
             return in_array($value . '.index', $permissions);
         });
+
+
+        Blade::if('canRoles', function (array $values) {
+            $permissions = auth()->user()->getPermissionsViaRoles()->pluck('name')->toArray();
+            $can = false;
+            foreach ($values as $value) {
+                $can = in_array($value . '.index', $permissions);
+                if ($can == true)
+                    break;
+            }
+            return $can;
+        });
+
+
     }
 }

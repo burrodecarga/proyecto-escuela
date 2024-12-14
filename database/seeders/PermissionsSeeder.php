@@ -24,13 +24,21 @@ class PermissionsSeeder extends Seeder
         Permission::create(['name' => 'roles.destroy', 'privilege' => 'role delete']);
         Permission::create(['name' => 'roles.show', 'privilege' => 'role view']);
 
-        Permission::create(['name' => 'coordinators.index', 'privilege' => 'coordinator list']);
-        Permission::create(['name' => 'coordinators.create', 'privilege' => 'coordinator create']);
-        Permission::create(['name' => 'coordinators.store', 'privilege' => 'coordinator create']);
-        Permission::create(['name' => 'coordinators.edit', 'privilege' => 'coordinator edit']);
-        Permission::create(['name' => 'coordinators.update', 'privilege' => 'coordinator edit']);
-        Permission::create(['name' => 'coordinators.destroy', 'privilege' => 'coordinator delete']);
-        Permission::create(['name' => 'coordinators.show', 'privilege' => 'coordinator view']);
+        Permission::create(['name' => 'permissions.index', 'privilege' => 'permission list']);
+        Permission::create(['name' => 'permissions.create', 'privilege' => 'permission create']);
+        Permission::create(['name' => 'permissions.store', 'privilege' => 'permission create']);
+        Permission::create(['name' => 'permissions.edit', 'privilege' => 'permission edit']);
+        Permission::create(['name' => 'permissions.update', 'privilege' => 'permission edit']);
+        Permission::create(['name' => 'permissions.destroy', 'privilege' => 'permission delete']);
+        Permission::create(['name' => 'permissions.show', 'privilege' => 'permission view']);
+
+        // Permission::create(['name' => 'coordinators.index', 'privilege' => 'coordinator list']);
+        // Permission::create(['name' => 'coordinators.create', 'privilege' => 'coordinator create']);
+        // Permission::create(['name' => 'coordinators.store', 'privilege' => 'coordinator create']);
+        // Permission::create(['name' => 'coordinators.edit', 'privilege' => 'coordinator edit']);
+        // Permission::create(['name' => 'coordinators.update', 'privilege' => 'coordinator edit']);
+        // Permission::create(['name' => 'coordinators.destroy', 'privilege' => 'coordinator delete']);
+        // Permission::create(['name' => 'coordinators.show', 'privilege' => 'coordinator view']);
 
         ///Permisos de usuer
 
@@ -125,7 +133,7 @@ class PermissionsSeeder extends Seeder
 
 
 
-        $super_admin_permissions = [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59];
+        $super_admin_permissions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27];
         //$super_admin_permissions=[];
         $coordinator_permissions = [8, 9, 10, 11, 12, 13, 14, 57, 58, 58, 60, 61, 62, 63];
         $teacher_permissions = [64, 65, 66, 67, 68, 69, 70];
