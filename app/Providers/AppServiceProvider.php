@@ -26,17 +26,20 @@ class AppServiceProvider extends ServiceProvider
         });
 
         Blade::if('canRole', function (string $value) {
-            $permissions = auth()->user()->getPermissionsViaRoles()->pluck('name')->toArray();
-            //dd($value,$permissions);
-            return in_array($value . '.index', $permissions);
+            $permissions = auth()->user()->getPermissionsViaRoles()->pluck('id')->toArray();
+            $role = auth()->user()->roles->first();
+            //return in_array($value, $permissions, true);
+            return $role->hasPermissionTo($value);
+            //return false;
         });
 
 
         Blade::if('canRoles', function (array $values) {
+            $role = auth()->user()->roles->first();
             $permissions = auth()->user()->getPermissionsViaRoles()->pluck('name')->toArray();
             $can = false;
             foreach ($values as $value) {
-                $can = in_array($value . '.index', $permissions);
+                $can = $role->hasPermissionTo($value);
                 if ($can == true)
                     break;
             }

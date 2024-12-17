@@ -3,7 +3,7 @@
 
 </div>
 <input type="hidden" name="id" value="{{ $role->id }}">
-<div>
+<div class="">
     <div class="grid grid-cols-2">
         @foreach ($permissions as $key => $p)
             <label for="permissions">

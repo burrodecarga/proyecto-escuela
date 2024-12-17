@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="max-w-md mx-auto bg-white rounded shadow-lg">
+    <div class="max-w-2xl mx-auto bg-white rounded shadow-lg">
         <div class="w-full p-6 mx-auto my-10 bg-white rounded-xl">
             <h1 class="text-[clamp(14px,1.5vw,24px)] font-bold uppercase text-center">
                 <strong>{{ $title }}</strong>
@@ -12,7 +12,7 @@
                         value="{{ old('name', $role->name) }}" readonly="true" />
                     <x-input-error for="name" />
                 </div>
-                <div class="mb-4">
+                <div class="w-full mb-4">
                     @include('config.roles.partials.permissions')
                 </div>
 

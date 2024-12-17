@@ -1,0 +1,358 @@
+[
+    {
+        "uri": "config/roles",
+        "name": "roles.index"
+    },
+    {
+        "uri": "config/roles/create",
+        "name": "roles.create"
+    },
+    {
+        "uri": "config/roles",
+        "name": "roles.store"
+    },
+    {
+        "uri": "config/roles/{role}",
+        "name": "roles.show"
+    },
+    {
+        "uri": "config/roles/{role}/edit",
+        "name": "roles.edit"
+    },
+    {
+        "uri": "config/roles/{role}",
+        "name": "roles.update"
+    },
+    {
+        "uri": "config/roles/{role}",
+        "name": "roles.destroy"
+    },
+    {
+        "uri": "config/users",
+        "name": "users.index"
+    },
+    {
+        "uri": "config/users/create",
+        "name": "users.create"
+    },
+    {
+        "uri": "config/users",
+        "name": "users.store"
+    },
+    {
+        "uri": "config/users/{user}",
+        "name": "users.show"
+    },
+    {
+        "uri": "config/users/{user}/edit",
+        "name": "users.edit"
+    },
+    {
+        "uri": "config/users/{user}",
+        "name": "users.update"
+    },
+    {
+        "uri": "config/users/{user}",
+        "name": "users.destroy"
+    },
+    {
+        "uri": "config/schools",
+        "name": "schools.index"
+    },
+    {
+        "uri": "config/schools/create",
+        "name": "schools.create"
+    },
+    {
+        "uri": "config/schools",
+        "name": "schools.store"
+    },
+    {
+        "uri": "config/schools/{school}",
+        "name": "schools.show"
+    },
+    {
+        "uri": "config/schools/{school}/edit",
+        "name": "schools.edit"
+    },
+    {
+        "uri": "config/schools/{school}",
+        "name": "schools.update"
+    },
+    {
+        "uri": "config/schools/{school}",
+        "name": "schools.destroy"
+    },
+    {
+        "uri": "config/sedes",
+        "name": "sedes.index"
+    },
+    {
+        "uri": "config/sedes/create",
+        "name": "sedes.create"
+    },
+    {
+        "uri": "config/sedes",
+        "name": "sedes.store"
+    },
+    {
+        "uri": "config/sedes/{sede}",
+        "name": "sedes.show"
+    },
+    {
+        "uri": "config/sedes/{sede}/edit",
+        "name": "sedes.edit"
+    },
+    {
+        "uri": "config/sedes/{sede}",
+        "name": "sedes.update"
+    },
+    {
+        "uri": "config/sedes/{sede}",
+        "name": "sedes.destroy"
+    },
+    {
+        "uri": "config/rooms",
+        "name": "rooms.index"
+    },
+    {
+        "uri": "config/rooms/create",
+        "name": "rooms.create"
+    },
+    {
+        "uri": "config/rooms",
+        "name": "rooms.store"
+    },
+    {
+        "uri": "config/rooms/{room}",
+        "name": "rooms.show"
+    },
+    {
+        "uri": "config/rooms/{room}/edit",
+        "name": "rooms.edit"
+    },
+    {
+        "uri": "config/rooms/{room}",
+        "name": "rooms.update"
+    },
+    {
+        "uri": "config/rooms/{room}",
+        "name": "rooms.destroy"
+    },
+    {
+        "uri": "config/resources",
+        "name": "resources.index"
+    },
+    {
+        "uri": "config/resources/create",
+        "name": "resources.create"
+    },
+    {
+        "uri": "config/resources",
+        "name": "resources.store"
+    },
+    {
+        "uri": "config/resources/{resource}",
+        "name": "resources.show"
+    },
+    {
+        "uri": "config/resources/{resource}/edit",
+        "name": "resources.edit"
+    },
+    {
+        "uri": "config/resources/{resource}",
+        "name": "resources.update"
+    },
+    {
+        "uri": "config/resources/{resource}",
+        "name": "resources.destroy"
+    },
+    {
+        "uri": "config/periodos",
+        "name": "periodos.index"
+    },
+    {
+        "uri": "config/periodos/create",
+        "name": "periodos.create"
+    },
+    {
+        "uri": "config/periodos",
+        "name": "periodos.store"
+    },
+    {
+        "uri": "config/periodos/{periodo}",
+        "name": "periodos.show"
+    },
+    {
+        "uri": "config/periodos/{periodo}/edit",
+        "name": "periodos.edit"
+    },
+    {
+        "uri": "config/periodos/{periodo}",
+        "name": "periodos.update"
+    },
+    {
+        "uri": "config/periodos/{periodo}",
+        "name": "periodos.destroy"
+    },
+    {
+        "uri": "config/courses",
+        "name": "courses.index"
+    },
+    {
+        "uri": "config/courses/create",
+        "name": "courses.create"
+    },
+    {
+        "uri": "config/courses",
+        "name": "courses.store"
+    },
+    {
+        "uri": "config/courses/{course}",
+        "name": "courses.show"
+    },
+    {
+        "uri": "config/courses/{course}/edit",
+        "name": "courses.edit"
+    },
+    {
+        "uri": "config/courses/{course}",
+        "name": "courses.update"
+    },
+    {
+        "uri": "config/courses/{course}",
+        "name": "courses.destroy"
+    },
+    {
+        "uri": "config/grados",
+        "name": "grados.index"
+    },
+    {
+        "uri": "config/grados/create",
+        "name": "grados.create"
+    },
+    {
+        "uri": "config/grados",
+        "name": "grados.store"
+    },
+    {
+        "uri": "config/grados/{grado}",
+        "name": "grados.show"
+    },
+    {
+        "uri": "config/grados/{grado}/edit",
+        "name": "grados.edit"
+    },
+    {
+        "uri": "config/grados/{grado}",
+        "name": "grados.update"
+    },
+    {
+        "uri": "config/grados/{grado}",
+        "name": "grados.destroy"
+    },
+    {
+        "uri": "config/permissions",
+        "name": "permissions.index"
+    },
+    {
+        "uri": "config/administrator/{school}",
+        "name": "schools.administrator"
+    },
+    {
+        "uri": "config/schools/assign",
+        "name": "schools.assign"
+    },
+    {
+        "uri": "config/coordinator/{sede}",
+        "name": "sedes.coordinator"
+    },
+    {
+        "uri": "config/coordinator/resource/{sede}",
+        "name": "sedes.resource"
+    },
+    {
+        "uri": "config/assign",
+        "name": "sedes.assign"
+    },
+    {
+        "uri": "config/assign_resource",
+        "name": "sedes.assign_resource"
+    },
+    {
+        "uri": "config/coordinator/resource_room/{room}",
+        "name": "rooms.resource"
+    },
+    {
+        "uri": "config/requeriment/{course}",
+        "name": "courses.requeriment"
+    },
+    {
+        "uri": "config/goal/{course}",
+        "name": "courses.goal"
+    },
+    {
+        "uri": "config/section/{course}",
+        "name": "courses.section"
+    },
+    {
+        "uri": "config/lesson/{course}/{lesson}",
+        "name": "courses.lesson"
+    },
+    {
+        "uri": "config/gestion",
+        "name": "gestion.index"
+    },
+    {
+        "uri": "config/gestion/secciones/{sede}",
+        "name": "gestion.secciones"
+    },
+    {
+        "uri": "config/gestion/create_lectivo/{sede}",
+        "name": "gestion.create_lectivo"
+    },
+    {
+        "uri": "config/gestion/lectivo_by_sede/{sede}",
+        "name": "gestion.lectivo_by_sede"
+    },
+    {
+        "uri": "config/gestion/grados_by_sede/{sede}",
+        "name": "gestion.grados_by_sede"
+    },
+    {
+        "uri": "config/gestion/add_students_to_grados_by_sede/{grado_sede}",
+        "name": "gestion.add_students_to_grados_by_sede"
+    },
+    {
+        "uri": "config/gestion/grados_and_sections_by_sede/{sede}",
+        "name": "gestion.grados_and_sections_by_sede"
+    },
+    {
+        "uri": "config/gestion/assign_teacher_to_lectivo/{lectivo}",
+        "name": "gestion.assign_teacher_to_lectivo"
+    },
+    {
+        "uri": "config/assign_teacher",
+        "name": "gestion.assign_teacher"
+    },
+    {
+        "uri": "config/gestion/grados_by_lectivo_and_sede/{sede}",
+        "name": "gestion.grados_by_lectivo_and_sede"
+    },
+    {
+        "uri": "config/assign_students_to_grado/{user}/{grado}",
+        "name": "gestion.assign_students_to_grado"
+    },
+    {
+        "uri": "config/students_of_sede/{sede}",
+        "name": "gestion.students_of_sede"
+    },
+    {
+        "uri": "config/courses_of_sede/{sede}",
+        "name": "gestion.courses_of_sede"
+    },
+    {
+        "uri": "storage/{path}",
+        "name": "storage.local"
+    }
+]

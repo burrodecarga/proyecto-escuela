@@ -1,0 +1,788 @@
+[
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "/",
+        "name": "null",
+        "action": "Closure",
+        "middleware": [
+            "web"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "_debugbar/assets/javascript",
+        "name": "debugbar.assets.js",
+        "action": "Barryvdh//Debugbar//Controllers//AssetController@js",
+        "middleware": [
+            "Barryvdh//Debugbar//Middleware//DebugbarEnabled",
+            "Closure"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "_debugbar/assets/stylesheets",
+        "name": "debugbar.assets.css",
+        "action": "Barryvdh//Debugbar//Controllers//AssetController@css",
+        "middleware": [
+            "Barryvdh//Debugbar//Middleware//DebugbarEnabled",
+            "Closure"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "DELETE",
+        "uri": "_debugbar/cache/{key}/{tags?}",
+        "name": "debugbar.cache.delete",
+        "action": "Barryvdh//Debugbar//Controllers//CacheController@delete",
+        "middleware": [
+            "Barryvdh//Debugbar//Middleware//DebugbarEnabled",
+            "Closure"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "_debugbar/clockwork/{id}",
+        "name": "debugbar.clockwork",
+        "action": "Barryvdh//Debugbar//Controllers//OpenHandlerController@clockwork",
+        "middleware": [
+            "Barryvdh//Debugbar//Middleware//DebugbarEnabled",
+            "Closure"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "_debugbar/open",
+        "name": "debugbar.openhandler",
+        "action": "Barryvdh//Debugbar//Controllers//OpenHandlerController@handle",
+        "middleware": [
+            "Barryvdh//Debugbar//Middleware//DebugbarEnabled",
+            "Closure"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "_debugbar/queries/explain",
+        "name": "debugbar.queries.explain",
+        "action": "Barryvdh//Debugbar//Controllers//QueriesController@explain",
+        "middleware": [
+            "Barryvdh//Debugbar//Middleware//DebugbarEnabled",
+            "Closure"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "about",
+        "name": "about",
+        "action": "Closure",
+        "middleware": [
+            "web"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "api/manager",
+        "name": "null",
+        "action": "Closure",
+        "middleware": [
+            "api"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "api/user",
+        "name": "null",
+        "action": "Closure",
+        "middleware": [
+            "api",
+            "Illuminate//Auth//Middleware//Authenticate:sanctum"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "api/users",
+        "name": "null",
+        "action": "Closure",
+        "middleware": [
+            "api"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/administrator/{school}",
+        "name": "schools.administrator",
+        "action": "App//Http//Controllers//Config//SchoolController@administrator",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "config/assign",
+        "name": "sedes.assign",
+        "action": "App//Http//Controllers//Config//SedeController@assign",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "config/assign_resource",
+        "name": "sedes.assign_resource",
+        "action": "App//Http//Controllers//Config//SedeController@assign_resource",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/assign_students_to_grado/{user}/{grado}",
+        "name": "gestion.assign_students_to_grado",
+        "action": "App//Http//Controllers//GestionController@assign_students_to_grado",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "config/assign_teacher",
+        "name": "gestion.assign_teacher",
+        "action": "App//Http//Controllers//GestionController@assign_teacher",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/coordinator/resource/{sede}",
+        "name": "sedes.resource",
+        "action": "App//Http//Controllers//Config//SedeController@resource",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/coordinator/resource_room/{room}",
+        "name": "rooms.resource",
+        "action": "App//Http//Controllers//Config//RoomController@resource",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/coordinator/{sede}",
+        "name": "sedes.coordinator",
+        "action": "App//Http//Controllers//Config//SedeController@coordinator",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/courses",
+        "name": "courses.index",
+        "action": "App//Http//Controllers//CourseController@index",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "config/courses",
+        "name": "courses.store",
+        "action": "App//Http//Controllers//CourseController@store",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/courses/create",
+        "name": "courses.create",
+        "action": "App//Http/Controllers//CourseController@create",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/courses/{course}",
+        "name": "courses.show",
+        "action": "App//Http//Controllers//CourseController@show",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "PUT|PATCH",
+        "uri": "config/courses/{course}",
+        "name": "courses.update",
+        "action": "App//Http//Controllers//CourseController@update",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "DELETE",
+        "uri": "config/courses/{course",
+        "name": "courses.destroy",
+        "action": "App//Http//Controllers//CourseController@destroy",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/courses/{course}/edit",
+        "name": "courses.edit",
+        "action": "App //Http//Controllers//CourseController@edit",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/courses_of_sede/{sede}",
+        "name": "gestion.courses_of_sede",
+        "action": "App //Http//Controllers//GestionController@courses_of_sede",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/gestion",
+        "name": "gestion.index",
+        "action": "App//Http//Controllers//GestionController@index",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/gestion/add_students_to_grados_by_sede/{grado_sede}",
+        "name": "gestion.add_students_to_grados_by_sede",
+        "action": "App //Http//Controllers//GestionController@add_students_to_grados_by_sede",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/gestion/assign_teacher_to_lectivo/{lectivo}",
+        "name": "gestion.assign_teacher_to_lectivo",
+        "action": "App //Http//Controllers//GestionController@assign_teacher_to_lectivo",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/gestion/create_lectivo/{sede}",
+        "name": "gestion.create_lectivo",
+        "action": "App //Http//Controllers//GestionController@create_lectivo",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/gestion/grados_and_sections_by_sede/{sede}",
+        "name": "gestion.grados_and_sections_by_sede",
+        "action": "App //Http//Controllers//GestionController@grados_and_sections_by_sede",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/gestion/grados_by_lectivo_and_sede/{sede}",
+        "name": "gestion.grados_by_lectivo_and_sede",
+        "action": "App //Http//Controllers//GestionController@grados_by_lectivo_and_sede",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/gestion/grados_by_sede/{sede}",
+        "name": "gestion.grados_by_sede",
+        "action": "App //Http//Controllers//GestionController@grados_by_sede",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/gestion/lectivo_by_sede/{sede}",
+        "name": "gestion.lectivo_by_sede",
+        "action": "App //Http//Controllers//GestionController@lectivo_by_sede",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/gestion/secciones/{sede}",
+        "name": "gestion.secciones",
+        "action": "App //Http//Controllers//GestionController@secciones",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/goal/{course}",
+        "name": "courses.goal",
+        "action": "App //Http//Controllers//CourseController@goal",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/grados",
+        "name": "grados.index",
+        "action": "App//Http//Controllers//Config//GradoController@index",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "POST",
+        "uri": "config/grados",
+        "name": "grados.store",
+        "action": "App//Http//Controllers//Config//GradoController@store",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/grados/create",
+        "name": "grados.create",
+        "action": "App//Http//Controllers//Config//GradoController@create",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/grados/{grado}",
+        "name": "grados.show",
+        "action": "App //Http//Controllers//Config//GradoController@show",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "PUT|PATCH",
+        "uri": "config/grados/{grado}",
+        "name": "grados.update",
+        "action": "App //Http//Controllers//Config//GradoController@update",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "DELETE",
+        "uri": "config/grados/{grado}",
+        "name": "grados.destroy",
+        "action": "App //Http//Controllers//Config//GradoController@destroy",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/grados/{grado}/edit",
+        "name": "grados.edit",
+        "action": "App //Http//Controllers//Config//GradoController@edit",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/lesson/{course}/{lesson}",
+        "name": "courses.lesson",
+        "action": "App //Http//Controllers//CourseController@lesson",
+        "middleware": [
+            "web",
+            "Illuminate//Auth//Middleware//Authenticate"
+        ]
+    },
+    {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "config/periodos",
+        "name":"periodo.
+index","action":"App //Http//Controllers//PeriodoController@index","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"POST","uri":"config/periodos","name":"periodos.store","action":"App//Http//Controllers//periodoController@store","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/periodos/create","name":"periodos.create","action":"App//Http//Controllers//PeriodoController@create","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/periodos/{periodo}","name":"periodos.show","action":"App //Http//Controllers//PeriodoController@show","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"PUT|PATCH","uri":"config/periodos/{periodo
+    }","name":"periodos.update","action":"App //Http//Controllers//PeriodoController@update","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"DELETE","uri":"config/periodos/{periodo
+}","name":"periodos.destroy","action":"App //Http//Controllers//PeriodoController@destroy","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/periodos/{periodo
+}/edit","name":"periodos.edit","action":"App //Http//Controllers//PeriodoController@edit","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/permissions","name":"permissions.index","action":"App//Http//Controllers//Config//PermissionController@index","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/requeriment/{course
+}","name":"courses.requeriment","action":"App //Http//Controllers//CourseController@requeriment","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"c nfig/resources","name":"resources.index","action":"App//Http//Controllers//Config//ResourceController@index","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"POST","uri":"config/resources","name":"resources.store","action":"App//Http//Controllers//Config//ResourceController@store","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/resources/create","name":"resources.create","action":"App//Http//Controllers//Config//ResourceController@create","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/resources/{reo
+urce
+}","name":"resources.show","action":"App //Http//Controllers//Config//ResourceController@show","middleware":["e
+b","Illuminate //Auth//Middleware//Authenticate"]},{"domain":null,"method":"PUT|PATCH","uri":"config/resources/{resource
+}","name":"resources.update","action":"App //Http//Controllers//Config//ResourceController@update","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"DELETE","uri":"config/resources
+{resource
+}","name":"resources.destroy","action":"App //Http//Controllers//Config//ResourceController@destroy","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/resources/{resource
+}/edit","name":"resources.edit","action":"App //Http//Controllers//Config//ResourceController@edit","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/roles","name":"roles.index","action":"App//Http//Controllers//Config//RoleController@index","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"POST","uri":"config/roles","name":"roles.store","action":"App//Http//Controllers//Config//RoleController@store","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/roles/create","name":"roles.create","action":"App//Http//Controllers//Config//RoleController@create","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/roles/{role
+}","name":"roles.show","action":"App //Http//Controllers//Config//RoleController@show","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"PUT|PATCH","uri":"config/roles/{role
+}","name":"roles.update","action":"App //Http//Controllers//Config//RoleController@update","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"DELETE","uri":"config/roles/{role
+}","name":"roles.destroy","action":"App //Http//Controllers//Config//RoleController@destroy","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/roles/{role
+}/edit","name":"roles.edit","action":"App //Http//Controllers//Config//RoleController@edit","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEA ","uri":"config/rooms","name":"rooms.index","action":"App//Http//Controllers//Config//RoomController@index","midde
+ware":["web","Illuminate //Auth//Middleware//Authenticate"]},{"domain":null,"method":"POST","uri":"config/rooms","name":"rooms.store","action":"App//Http//Controllers//Config//RoomController@store","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/rooms/create","name":"rooms.create","action":"App//Http//Controllers//Config//RoomController@create","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/rooms/{room
+}","name":"rooms.show","action":"App //Http//Controllers//Config//RoomController@show","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"PUT|PATCH","uri":"config/rooms/{room
+}","name":"rooms.update","action":"App //Http//Controllers//Config//RoomController@update","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"DELETE","uri":"config/rooms/{room
+}","name":"rooms.destroy","action":"App //Http//Controllers//Config//RoomController@destroy","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":u
+ll,
+"method": "GET|HEAD",
+"uri": "config/rooms/{room}/edit",
+"name": "rooms.edit",
+"action": "App//Http//Controllers//Config//RoomController@edit",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//Authenticate"
+]
+},
+{
+"domain": null,
+"method": "GET|HEAD",
+"uri": "config/schools",
+"name": "schools.index",
+"action": "App//Http//Controllers//Config//SchoolController@index",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//Authenticate"
+]
+},
+{
+"domain": null,
+"method": "POST",
+"uri": "config/schools",
+"name": "schools.store",
+"action": "App//Http//Controllers//Config//SchoolController@store",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//Authenticate"
+]
+},
+{
+"domain": null,
+"method": "POST",
+"uri": "config/schools/assign",
+"name": "schools.assign",
+"action": "App//Http//Controllers//Config//SchoolController@assign",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//Authenticate"
+]
+},
+{
+"domain": null,
+"method": "GET|HEAD",
+"uri": "config/schools/create",
+"name": "schools.create",
+"action": "App//Http//Controllers//Config//SchoolController@create",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//Authenticate"
+]
+},
+{
+"domain": null,
+"method": "GET|HEAD",
+"uri": "config/schools/{school}",
+"name": "schools.show",
+"action": "App//Http//Controllers//Config//SchoolController@show",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//Authenticate"
+]
+},
+{
+"domain": null,
+"method": "PUT|PATCH",
+"uri": "config/schools/{school}",
+"name": "schools.update",
+"action": "App//Http//Controllers//Config//SchoolController@update",
+"middleware": [
+"web","Illumint
+e //Auth//Middleware//Authenticate"]},{"domain":null,"method":"DELETE","uri":"config/schools/{school
+}","name":"sh
+ools.destroy","action":"App //Http//Controllers//Config//SchoolController@destroy","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/schools/{school
+}/edit","name":"schools.edit","action":"App //Http//Controllers//Config//SchoolController@edit","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/section/{course
+}","name":"courses.section","action":"App //Http//Controllers//CourseController@section","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/sedes","name":"sedes.index","action":"App//Http//Controllers//Config//SedeController@index","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"POST","uri":"config/sedes","name":"sedes.store","action":"App//Http//Controllers//Config//SedeController@store","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/sedes/create","name":"sedes.create","action":"App//Http//Controllers//Config//SedeController@create","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/sedes/{sede
+}","name":"sedes.show","action":"App //Http//Controllers//Config//SedeController@show","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"PUT|PATCH","uri":"config/sedes/{sede
+}","name":"sedes.update","action":"App //Http//Controllers//Config//SedeController@update","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"DELETE","uri":"config/sedes/{sede
+}","name":"sedes.destroy","action":"App //Http//Controllers//Config//SedeController@destroy","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/sedes/{sede
+}/edit","name":"sedes.edit","action":"App //Http//Controllers//Config//SedeController@edit","middleware":["web","Illuminate//Auth//Middleware//Authenticate"]},{"domain":null,"method":"GET|HEAD","uri":"config/students_of_sede/{sede
+}","name":"gestion.students_of_sede","action":"App //Http//Controllers//GestionController@students_of_sede","middleware: [
+            "web",
+"Illuminate//Auth//Middleware//Authenticate"
+]
+},
+{
+"domain": null,
+"method": "GET|HEAD",
+"uri": "config/users",
+"name": "users.index",
+"action": "App//Http//Controllers//Config//UserController@index",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//Authenticate"
+]
+},
+{
+"domain": null,
+"method": "POST",
+"uri": "config/users",
+"name": "users.store",
+"action": "App//Http//Controllers//Config//UserController@store",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//Authenticate"
+]
+},
+{
+"domain": null,
+"method": "GET|HEAD",
+"uri": "config/users/create",
+"name": "users.create",
+"action": "App//Http//Controllers//Config//UserController@create",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//Authenticate"
+]
+},
+{
+"domain": null,
+"method": "GET|HEAD",
+"uri": "config/users/{user}",
+"name": "users.show",
+"action": "App//Http//Controllers//Config//UserController@show",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//Authenticate"
+]
+},
+{
+"domain": null,
+"method": "PUT|PATCH",
+"uri": "config/users/{user}",
+"name": "users.update",
+"action": "App//Http//Controllers//Config//UserController@update",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//Authenticate"
+]
+},
+{
+"domain": null,
+"method": "DELETE",
+"uri": "config/users/{user}",
+"name": "users.destroy",
+"action": "App//Http//Controllers//Config//UserController@destroy",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//Authenticate"
+]
+},
+{
+"domain": null,
+"method": "GET|HEAD",
+"uri": "config/users/{user}/edit",
+"name": "users.edit",
+"action": "App//Http//Controllers//Config//UserController@edit",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//Authenticate"
+]
+},
+{
+"domain": null,
+"method": "GET|HEAD",
+"uri": "forgot-password",
+"name": "password.request",
+"action": "Laravel//Fortify//Http//Controllers//PasswordResetLinkController@create",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//RedirectIfAuthenticated:web"
+]
+},
+{
+"domain": null,
+"method": "POST",
+"uri": "forgot-password",
+"name": "password.email",
+"action": "Laravel//Fortify//Http//Controllers//PasswordResetLinkController@store",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//RedirectIfAuthenticated:web"
+]
+},
+{
+"domain": null,
+"method": "GET|HEAD",
+"uri": "home",
+"name": "home",
+"action": "App//Http//Controllers//HomeController@index",
+"middlewar": [
+"web",
+"Illuminate//Auth//Middleware//Authenticate:sanctum",
+"Laravel//Jetstream//Http//Middleware//AuthenticateSession",
+"Illuminate//Auth//Middleware//EnsureEmailIsVerified"
+]
+},
+{
+"domain": null,
+"method": "GET|HEAD",
+"uri": "livewire/livewire.js",
+"name": "null",
+"action": "Livewire//Mechanisms//FrontendAssets//FrontendAssets@returnJavaScriptAsFile",
+"middleware": []
+},
+{
+"domain": null,
+"method": "GET|HEAD",
+"uri": "livewire/livewire.min.js.map",
+"name": "null",
+"action": "Livewire//Mechanisms//FrontendAssets//FrontendAssets@maps",
+"middleware": []
+},
+{
+"domain": null,
+"method": "GET|HEAD",
+"uri": "livewire/preview-file/{filename}",
+"name": "livewire.preview-file",
+"action": "Livewire//Features//SupportFileUploads//FilePreviewController@handle",
+"middleware": [
+"web"
+]
+},
+{
+"domain": null,
+"method": "POST",
+"uri": "livewire/update",
+"name": "livewire.update",
+"action": "Livewire//Mechanisms//HandleRequests//HandleRequests@handleUpdate",
+"middleware": [
+"web"
+]
+},
+{
+"domain": null,
+"method": "POST",
+"uri": "livewire/upload-file",
+"name": "livewire.upload-file",
+"action": "Livewire//Features//SupportFileUploads//FileUploadController@handle",
+"middleware": [
+"web",
+"Illuminate//Routing//Middleware//ThrottleRequests:60,1"
+]
+},
+{
+"domain": null,
+"method": "GET|HEAD",
+"uri": "login",
+"name": "login",
+"action": "Laravel//Fortify//Http//Controllers//AuthenticatedSessionController@create",
+"middleware": [
+"web",
+"Illuminate//Auth//Middleware//RedirectIfAuthenticated:web"
+]
+},
+{
+"domain": null,
+"method": "POST",
+"uri": "login",
+"name": "null",
+"action": "Laravel//Fortify//Http//Controllers//AuthenticatedSessionController@store",
+"middleware": [
+"web","Illuminate//Auth//Middleware//RedirectIfAuthn
+ticated:web","Illuminate //Routing//Middleware//ThrottleRequests:login"]},{"domain":null,"method":"POST","uri":"logout","name":"logout","action":"Laravel//Fortify//Http//Controllers//AuthenticatedSessionController@destroy","middleware":["web","Illuminate//Auth//Middleware//Authenticate:web"]},{"domain":null,"method":"GET|HEAD","uri":"register","name":"register","action":"Laravel//Fortify//Http//Controllers//RegisteredUserController@create","middleware":["web","Illuminate//Auth//Middleware//RedirectIfAuthenticated:web"]},{"domain":null,"method":"POST","uri":"register","name":null,"action":"Laravel//Fortify//Http//Controllers//RegisteredUserController@store","middleware":["web","Illuminate//Auth//Middleware//RedirectIfAuthenticated:web"]},{"domain":null,"method":"POST","uri":"reset-password","name":"password.update","action":"Laravel//Fortify//Http//Controllers//NewPasswordController@store","middleware":["web","Illuminate//Auth//Middleware//RedirectIfAuthenticated:web"]},{"domain":null,"method":"GET|HEAD","uri":"reset-password/{token
+}","name":"password.reset","action":"Laravel //Fortify//Http//Controllers//NewPasswordController@create","middleware":["web","Illuminate//Auth//Middleware//RedirectIfAuthenticated:web"]},{"domain":null,"method":"GET|HEAD","uri":"sanctum/csrf-cookie","name":"sanctum.csrf-cookie","action":"Laravel//Sanctum//Http//Controllers//CsrfCookieController@show","middleware":["web"]},{"domain":null,"method":"GET|HEAD","uri":"storage/{path
+}","name":"storage.local","action":"Closure","middleware":[]},{"domain":null,"method":"GET|HEAD","uri":"two-factor-challenge","name":"two-factor.login","action":"Laravel //Fortify//Http//Controllers//TwoFactorAuthenticatedSessionController@create","middleware":["web","Illuminate//Auth//Middleware//RedirectIfAuthenticated:web"]},{"domain":null,"method":"POST","uri":"two-factor-challenge","name":null,"action":"Laravel//Fortify//Http//Controllers//TwoFactorAuthenticatedSessionController@store","middleware":["web","Illuminate//Auth//Middleware//RedirectIfAuthenticated:web","Illuminate//Rot
+ing //Middleware//ThrottleRequests:two-factor"]},{"domain":null,"method":"GET|HEAD","uri":"up","name":null,"action":"Closure","middleware":[]},{"domain":null,"method":"GET|HEAD","uri":"user/confirm-password","name":"password.confirm","action":"Laravel//Fortify//Http//Controllers//ConfirmablePasswordController@show","middleware":["web","Illumn
+ate //Auth//Middleware//Authenticate:web"]},{"domain":null,"method":"POST","uri":"user/confirm-password","name":null,"action":"Laravel//Fortify//Http//Controllers//ConfirmablePasswordController@store","middleware":["web","Illuminate//Auth//Middleware//Authenticate:web"]},{"domain":null,"method":"GET|HEAD","uri":"user/confirmed-password-status","name":"password.confirmation","action":"Laravel//Fortify//Http//Controllers//ConfirmedPasswordStatusController@show","middleware":["web","Illuminate//Auth//Middleware//Authenticate:web"]},{"domain":null,"method":"POST","uri":"user/confirmed-two-factor-authentication","name":"two-factor.confirm","action":"Laravel//Fortify//Http//Controllers//ConfirmedTwoFactorAuthenticationController@store","middleware":["web","Illuminate//Auth//Middleware//Authenticate:web","Illuminate//Auth//Middleware//RequirePassword"]},{"domain":null,"method":"PUT","uri":"user/password","name":"user-password.update","action":"Laravel//Fortify//Http//Controllers//PasswordController@update","middleware":["web","Illuminate//Auth//Middleware//Authenticate:web"]},{"domain":null,"method":"GET|HEAD","uri":"user/profile","name":"profile.show","action":"Laravel//Jetstream//Http//Controllers//Livewire//UserProfileController@show","middleware":["web","Illuminate//Auth//Middleware//Authenticate:sanctum","Laravel//Jetstream//Http//Middleware//AuthenticateSession"]},{"domain":null,"method":"PUT","uri":"user/profile-information","name":"user-profile-information.update","action":"Laravel//Fortify//Http//Controllers//ProfileInformationController@update","middleware":["web","Illuminate//Auth//Middleware//Authenticate:web"]},{"domain":null,"method":"POST","uri":"user/two-factor-authentication","name":"two-factor.enable","action":"Laravel//Fortify//Http//Controllers//TwoFactorAuthenticationController@store","middleware":["web","Illuminate//Auth//Middleware//Authenticate:web","Illuminate//Auth//Middleware//RequirePassword"]},{"domain":null,"method":"DELETE","uri":"user/two-factor-authentication","name":"two-factor.disable","action":"Laravel//Fortify//Http//Controllers//TwoFactorAuthenticationController@destroy","middleware":["web","Illuminate//Auth/
+Middleware //Authenticate:web","Illuminate//Auth//Middleware//RequirePassword"]},{"domain":null,"method":"GET|HEAD","uri":"user/two-factor-qr-code","name":"two-factor.qr-code","action":"Laravel//Fortify//Http//Controllers//TwoFactorQrCodeController@show","middleware":["web","Illuminate//Auth//Middleware//Authenticate:web","Illuminate//Auth//Middleware//RequirePassword"]},{"domain":null,"method":"GET|HEAD","uri":"user/two-factor-recovery-codes","name":"two-factor.recovery-codes","action":"Laravel//Fortify//Http//Controllers//RecoveryCodeController@index","middleware":["web","Illuminate//Auth//Middleware//Authenticate:web","Illuminate//Auth//Middleware//RequirePassword"]},{"domain":null,"method":"POST","uri":"user/two-factor-recovery-codes","name":null,"action":"Laravel//Fortify//Http//Controllers//RecoveryCodeController@store","middleware":["web","Illuminate//Auth//Middleware//Authenticate:web","Illuminate//Auth//Middleware//RequirePassword"]},{"domain":null,"method":"GET|HEAD","uri":"user/two-factor-secret-key","name":"two-factor.secret-key","action":"Laravel//Fortify//Http//Controllers//TwoFactorSecretKeyController@show","middleware":["web","Illuminate//Auth//Middleware//Authenticate:web","Illuminate//Auth//Middleware//RequirePassword"]}]

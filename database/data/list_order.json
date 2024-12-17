@@ -1,0 +1,754 @@
+[
+    {
+        "id": 1,
+        "name": "coursescreate",
+        "privilege": "coursescreate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:29",
+        "updated_at": "2024-12-16 19:00:29"
+    },
+    {
+        "id": 2,
+        "name": "coursesdestroy",
+        "privilege": "coursesdestroy",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:29",
+        "updated_at": "2024-12-16 19:00:29"
+    },
+    {
+        "id": 3,
+        "name": "coursesedit",
+        "privilege": "coursesedit",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:29",
+        "updated_at": "2024-12-16 19:00:29"
+    },
+    {
+        "id": 4,
+        "name": "coursesgoal",
+        "privilege": "coursesgoal",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:29",
+        "updated_at": "2024-12-16 19:00:29"
+    },
+    {
+        "id": 5,
+        "name": "coursesindex",
+        "privilege": "coursesindex",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 6,
+        "name": "courseslesson",
+        "privilege": "courseslesson",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 7,
+        "name": "coursesrequeriment",
+        "privilege": "coursesrequeriment",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 8,
+        "name": "coursessection",
+        "privilege": "coursessection",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 9,
+        "name": "coursesshow",
+        "privilege": "coursesshow",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 10,
+        "name": "coursesstore",
+        "privilege": "coursesstore",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 11,
+        "name": "coursesupdate",
+        "privilege": "coursesupdate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 12,
+        "name": "gestionadd-students-to-grados-by-sede",
+        "privilege": "gestionadd-students-to-grados-by-sede",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 13,
+        "name": "gestionassign-students-to-grado",
+        "privilege": "gestionassign-students-to-grado",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 14,
+        "name": "gestionassign-teacher",
+        "privilege": "gestionassign-teacher",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 15,
+        "name": "gestionassign-teacher-to-lectivo",
+        "privilege": "gestionassign-teacher-to-lectivo",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 16,
+        "name": "gestioncourses-of-sede",
+        "privilege": "gestioncourses-of-sede",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 17,
+        "name": "gestioncreate-lectivo",
+        "privilege": "gestioncreate-lectivo",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 18,
+        "name": "gestiongrados-and-sections-by-sede",
+        "privilege": "gestiongrados-and-sections-by-sede",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 19,
+        "name": "gestiongrados-by-lectivo-and-sede",
+        "privilege": "gestiongrados-by-lectivo-and-sede",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 20,
+        "name": "gestiongrados-by-sede",
+        "privilege": "gestiongrados-by-sede",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 21,
+        "name": "gestionindex",
+        "privilege": "gestionindex",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 22,
+        "name": "gestionlectivo-by-sede",
+        "privilege": "gestionlectivo-by-sede",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 23,
+        "name": "gestionsecciones",
+        "privilege": "gestionsecciones",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 24,
+        "name": "gestionstudents-of-sede",
+        "privilege": "gestionstudents-of-sede",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 25,
+        "name": "gradoscreate",
+        "privilege": "gradoscreate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 26,
+        "name": "gradosdestroy",
+        "privilege": "gradosdestroy",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 27,
+        "name": "gradosedit",
+        "privilege": "gradosedit",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 28,
+        "name": "gradosindex",
+        "privilege": "gradosindex",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 29,
+        "name": "gradosshow",
+        "privilege": "gradosshow",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 30,
+        "name": "gradosstore",
+        "privilege": "gradosstore",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 31,
+        "name": "gradosupdate",
+        "privilege": "gradosupdate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 32,
+        "name": "periodoscreate",
+        "privilege": "periodoscreate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 33,
+        "name": "periodosdestroy",
+        "privilege": "periodosdestroy",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 34,
+        "name": "periodosedit",
+        "privilege": "periodosedit",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 35,
+        "name": "periodosindex",
+        "privilege": "periodosindex",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 36,
+        "name": "periodosshow",
+        "privilege": "periodosshow",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 37,
+        "name": "periodosstore",
+        "privilege": "periodosstore",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 38,
+        "name": "periodosupdate",
+        "privilege": "periodosupdate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 39,
+        "name": "permissionscreate",
+        "privilege": "permissionscreate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 40,
+        "name": "permissionsdestroy",
+        "privilege": "permissionsdestroy",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 41,
+        "name": "permissionsedit",
+        "privilege": "permissionsedit",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 42,
+        "name": "permissionsindex",
+        "privilege": "permissionsindex",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 43,
+        "name": "permissionsshow",
+        "privilege": "permissionsshow",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 44,
+        "name": "permissionsstore",
+        "privilege": "permissionsstore",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 45,
+        "name": "permissionsupdate",
+        "privilege": "permissionsupdate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 46,
+        "name": "resourcescreate",
+        "privilege": "resourcescreate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 47,
+        "name": "resourcesdestroy",
+        "privilege": "resourcesdestroy",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 48,
+        "name": "resourcesedit",
+        "privilege": "resourcesedit",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 49,
+        "name": "resourcesindex",
+        "privilege": "resourcesindex",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 50,
+        "name": "resourcesshow",
+        "privilege": "resourcesshow",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 51,
+        "name": "resourcesstore",
+        "privilege": "resourcesstore",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 52,
+        "name": "resourcesupdate",
+        "privilege": "resourcesupdate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 53,
+        "name": "rolescreate",
+        "privilege": "rolescreate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 54,
+        "name": "rolesdestroy",
+        "privilege": "rolesdestroy",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 55,
+        "name": "rolesedit",
+        "privilege": "rolesedit",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 56,
+        "name": "rolesindex",
+        "privilege": "rolesindex",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 57,
+        "name": "rolesshow",
+        "privilege": "rolesshow",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 58,
+        "name": "rolesstore",
+        "privilege": "rolesstore",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 59,
+        "name": "rolesupdate",
+        "privilege": "rolesupdate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 60,
+        "name": "roomscreate",
+        "privilege": "roomscreate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 61,
+        "name": "roomsdestroy",
+        "privilege": "roomsdestroy",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 62,
+        "name": "roomsedit",
+        "privilege": "roomsedit",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 63,
+        "name": "roomsindex",
+        "privilege": "roomsindex",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 64,
+        "name": "roomsresource",
+        "privilege": "roomsresource",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 65,
+        "name": "roomsshow",
+        "privilege": "roomsshow",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 66,
+        "name": "roomsstore",
+        "privilege": "roomsstore",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 67,
+        "name": "roomsupdate",
+        "privilege": "roomsupdate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 68,
+        "name": "schoolsadministrator",
+        "privilege": "schoolsadministrator",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 69,
+        "name": "schoolsassign",
+        "privilege": "schoolsassign",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 70,
+        "name": "schoolscreate",
+        "privilege": "schoolscreate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 71,
+        "name": "schoolsdestroy",
+        "privilege": "schoolsdestroy",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 72,
+        "name": "schoolsedit",
+        "privilege": "schoolsedit",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 73,
+        "name": "schoolsindex",
+        "privilege": "schoolsindex",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 74,
+        "name": "schoolsshow",
+        "privilege": "schoolsshow",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 75,
+        "name": "schoolsstore",
+        "privilege": "schoolsstore",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 76,
+        "name": "schoolsupdate",
+        "privilege": "schoolsupdate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 77,
+        "name": "sedesassign",
+        "privilege": "sedesassign",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 78,
+        "name": "sedesassign-resource",
+        "privilege": "sedesassign-resource",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 79,
+        "name": "sedescoordinator",
+        "privilege": "sedescoordinator",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 80,
+        "name": "sedescreate",
+        "privilege": "sedescreate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 81,
+        "name": "sedesdestroy",
+        "privilege": "sedesdestroy",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 82,
+        "name": "sedesedit",
+        "privilege": "sedesedit",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 83,
+        "name": "sedesindex",
+        "privilege": "sedesindex",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 84,
+        "name": "sedesresource",
+        "privilege": "sedesresource",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 85,
+        "name": "sedesshow",
+        "privilege": "sedesshow",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 86,
+        "name": "sedesstore",
+        "privilege": "sedesstore",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 87,
+        "name": "sedesupdate",
+        "privilege": "sedesupdate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 88,
+        "name": "userscreate",
+        "privilege": "userscreate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 89,
+        "name": "usersdestroy",
+        "privilege": "usersdestroy",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 90,
+        "name": "usersedit",
+        "privilege": "usersedit",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 91,
+        "name": "usersindex",
+        "privilege": "usersindex",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 92,
+        "name": "usersshow",
+        "privilege": "usersshow",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 93,
+        "name": "usersstore",
+        "privilege": "usersstore",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    },
+    {
+        "id": 94,
+        "name": "usersupdate",
+        "privilege": "usersupdate",
+        "guard_name": "web",
+        "created_at": "2024-12-16 19:00:30",
+        "updated_at": "2024-12-16 19:00:30"
+    }
+]

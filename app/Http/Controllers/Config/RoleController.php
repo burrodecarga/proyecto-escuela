@@ -76,6 +76,7 @@ class RoleController extends Controller
         $title = __("role show");
         $btn = "show";
         $permissions_id = $role->permissions->pluck('id')->toArray();
+        //dd($permissions_id);
         return view('config.roles.show', compact('permissions', 'role', 'btn', 'permissions_id', 'title'));
     }
 
