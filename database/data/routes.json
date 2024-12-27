@@ -28,6 +28,10 @@
         "name": "roles.destroy"
     },
     {
+        "uri": "config/permissions",
+        "name": "permissions.index"
+    },
+    {
         "uri": "config/users",
         "name": "users.index"
     },
@@ -250,10 +254,6 @@
     {
         "uri": "config/grados/{grado}",
         "name": "grados.destroy"
-    },
-    {
-        "uri": "config/permissions",
-        "name": "permissions.index"
     },
     {
         "uri": "config/administrator/{school}",

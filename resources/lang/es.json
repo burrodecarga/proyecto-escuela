@@ -436,5 +436,7 @@
     "no teacher": "sin profesor asignado",
     "add teacher to course": "agregar profesor a la asignatura",
     "config grados by sede": "configurar grados de la sede",
-    "students of sede": "estudiantes de la sede"
+    "students of sede": "estudiantes de la sede",
+    "grados.index": "grados",
+    "courses.index": "asignaturas"
 }

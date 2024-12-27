@@ -1,17 +1,22 @@
 @php
     $navLinks = [
-        ['name' => 'roles', 'route' => route('roles.index'), 'active' => request()->routeIs('roles.index')],
+        ['name' => 'roles.index', 'route' => route('roles.index'), 'active' => request()->routeIs('roles.index')],
         [
-            'name' => 'permissions',
+            'name' => 'permissions.index',
             'route' => route('permissions.index'),
             'active' => request()->routeIs('permissions.index'),
         ],
-        ['name' => 'users', 'route' => route('users.index'), 'active' => request()->routeIs('users.index')],
-        ['name' => 'schools', 'route' => route('schools.index'), 'active' => request()->routeIs('schools.index')],
-        ['name' => 'sedes', 'route' => route('sedes.index'), 'active' => request()->routeIs('sedes.index')],
-        ['name' => 'rooms', 'route' => route('rooms.index'), 'active' => request()->routeIs('rooms.index')],
-        ['name' => 'resources', 'route' => route('resources.index'), 'active' => request()->routeIs('resources.index')],
-        ['name' => 'grados', 'route' => route('grados.index'), 'active' => request()->routeIs('grados.index')],
+        ['name' => 'users.index', 'route' => route('users.index'), 'active' => request()->routeIs('users.index')],
+        ['name' => 'schools.index', 'route' => route('schools.index'), 'active' => request()->routeIs('schools.index')],
+        ['name' => 'sedes.index', 'route' => route('sedes.index'), 'active' => request()->routeIs('sedes.index')],
+        ['name' => 'rooms.index', 'route' => route('rooms.index'), 'active' => request()->routeIs('rooms.index')],
+        [
+            'name' => 'resources.index',
+            'route' => route('resources.index'),
+            'active' => request()->routeIs('resources.index'),
+        ],
+        ['name' => 'grados.index', 'route' => route('grados.index'), 'active' => request()->routeIs('grados.index')],
+        ['name' => 'courses.index', 'route' => route('courses.index'), 'active' => request()->routeIs('courses.index')],
     ];
 @endphp
 
